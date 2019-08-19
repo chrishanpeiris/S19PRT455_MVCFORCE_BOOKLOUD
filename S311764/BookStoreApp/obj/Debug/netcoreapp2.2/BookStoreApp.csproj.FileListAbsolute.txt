@@ -59,3 +59,4 @@ C:\Users\Chrishan\Documents\S19PRT455_MVCFORCE_BOOKLOUD\S311764\BookStoreApp\obj
 C:\Users\Chrishan\Documents\S19PRT455_MVCFORCE_BOOKLOUD\S311764\BookStoreApp\obj\Debug\netcoreapp2.2\BookStoreApp.pdb
 C:\Users\Chrishan\Documents\S19PRT455_MVCFORCE_BOOKLOUD\S311764\BookStoreApp\obj\Debug\netcoreapp2.2\BookStoreApp.csproj.CopyComplete
 C:\Users\Chrishan\Documents\S19PRT455_MVCFORCE_BOOKLOUD\S311764\BookStoreApp\obj\Debug\netcoreapp2.2\Razor\Views\Book\Index.g.cshtml.cs
+C:\Users\Chrishan\Documents\S19PRT455_MVCFORCE_BOOKLOUD\S311764\BookStoreApp\obj\Debug\netcoreapp2.2\Razor\Views\Book\Create.g.cshtml.cs

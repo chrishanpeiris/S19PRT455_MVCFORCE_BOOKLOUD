@@ -23,5 +23,23 @@ namespace BookStoreApp.Controllers
         {
             return View(await _db.Book.ToListAsync());
         }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create([Bind("Id,Name")] Book book)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Add(book);
+                await _db.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(book);
+        }
     }
 }
