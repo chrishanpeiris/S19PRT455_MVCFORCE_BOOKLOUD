@@ -17,6 +17,15 @@ namespace BookStoreApp.DAL
         public int ID { get; set; }
         public string Name { get; set; }
         public string Brand { get; set; }
+        public string Model { get; set; }
+    }
+
+    public class Scanner
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public string Model { get; set; }
+        public string Brand { get; set; }
     }
 
     public class EfBridgeContext : DbContext
@@ -27,5 +36,6 @@ namespace BookStoreApp.DAL
         }
         public virtual DbSet<Book> Book { get; set; }
         public virtual DbSet<Printer> Printer{ get; set; }
+        public virtual DbSet<Scanner> Scanner { get; set; }
     }
 }
