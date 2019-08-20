@@ -63,3 +63,8 @@ C:\Users\Chrishan\Documents\S19PRT455_MVCFORCE_BOOKLOUD\S311764\BookStoreApp\obj
 C:\Users\Chrishan\Documents\S19PRT455_MVCFORCE_BOOKLOUD\S311764\BookStoreApp\obj\Debug\netcoreapp2.2\Razor\Views\Book\Edit.g.cshtml.cs
 C:\Users\Chrishan\Documents\S19PRT455_MVCFORCE_BOOKLOUD\S311764\BookStoreApp\obj\Debug\netcoreapp2.2\Razor\Views\Book\Delete.g.cshtml.cs
 C:\Users\Chrishan\Documents\S19PRT455_MVCFORCE_BOOKLOUD\S311764\BookStoreApp\obj\Debug\netcoreapp2.2\Razor\Views\Book\View.g.cshtml.cs
+C:\Users\Chrishan\Documents\S19PRT455_MVCFORCE_BOOKLOUD\S311764\BookStoreApp\obj\Debug\netcoreapp2.2\Razor\Views\Printer\Create.g.cshtml.cs
+C:\Users\Chrishan\Documents\S19PRT455_MVCFORCE_BOOKLOUD\S311764\BookStoreApp\obj\Debug\netcoreapp2.2\Razor\Views\Printer\Delete.g.cshtml.cs
+C:\Users\Chrishan\Documents\S19PRT455_MVCFORCE_BOOKLOUD\S311764\BookStoreApp\obj\Debug\netcoreapp2.2\Razor\Views\Printer\Edit.g.cshtml.cs
+C:\Users\Chrishan\Documents\S19PRT455_MVCFORCE_BOOKLOUD\S311764\BookStoreApp\obj\Debug\netcoreapp2.2\Razor\Views\Printer\Index.g.cshtml.cs
+C:\Users\Chrishan\Documents\S19PRT455_MVCFORCE_BOOKLOUD\S311764\BookStoreApp\obj\Debug\netcoreapp2.2\Razor\Views\Printer\View.g.cshtml.cs
