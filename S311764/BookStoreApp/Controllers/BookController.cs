@@ -13,16 +13,16 @@ namespace BookStoreApp.Controllers
 {
     public class BookController : Controller
     {
-        private readonly EfBridgeContext _db;
+        private readonly EfBridgeContext _db; //create a private variable
 
-        public BookController(EfBridgeContext db)
+        public BookController(EfBridgeContext db) //create a constructor and pass the dbcontext from DAL folder
         {
-            _db = db;
+            _db = db; //assign private variable to reference 
         }
         // GET: /<controller>/
         public async Task<IActionResult> Index()
         {
-            return View(await _db.Book.ToListAsync());
+            return View(await _db.Book.ToListAsync()); //read data from Book table
         }
 
         public IActionResult Create()
@@ -30,14 +30,14 @@ namespace BookStoreApp.Controllers
             return View();
         }
 
-        [HttpPost]
+        [HttpPost] //post method
         public async Task<IActionResult> Create([Bind("Id,Name")] Book book)
         {
             if (ModelState.IsValid)
             {
-                _db.Add(book);
-                await _db.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                _db.Add(book); //add data to Book table
+                await _db.SaveChangesAsync(); //wait for database response
+                return RedirectToAction(nameof(Index)); // redirect to index
             }
 
             return View(book);
@@ -45,12 +45,12 @@ namespace BookStoreApp.Controllers
 
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null)
+            if (id == null) //check if the id is null
             {
                 return NotFound();
             }
 
-            var book = await _db.Book.FindAsync(id);
+            var book = await _db.Book.FindAsync(id); // search the id in Book table
             if (book == null)
             {
                 return NotFound();
@@ -60,7 +60,7 @@ namespace BookStoreApp.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name")] Book book)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name")] Book book) 
         {
             if (id != book.Id)
             {
@@ -71,7 +71,7 @@ namespace BookStoreApp.Controllers
             {
                 try
                 {
-                    _db.Update(book);
+                    _db.Update(book); // update Book name
                     await _db.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -85,9 +85,37 @@ namespace BookStoreApp.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index)); // redirect to index
             }
             return View(book);
+        }
+
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var book = await _db.Book
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (book == null)
+            {
+                return NotFound();
+            }
+
+            return View(book);
+        }
+
+        [HttpPost, ActionName("Delete")]
+
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var book = await _db.Book.FindAsync(id);
+            _db.Book.Remove(book);
+            await _db.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+
         }
 
         private bool BooksExist(int id)
