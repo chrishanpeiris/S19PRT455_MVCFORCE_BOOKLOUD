@@ -6,6 +6,10 @@
 
 <h2>Welcome to Book Store</h2>
 
+<p>
+    <a asp-action="Create">Add Books</a>
+</p>
+
 <table class="table">
     <thead>
     <tr> <th>@Html.DisplayNameFor(model => model.Name)</th></tr>
@@ -15,6 +19,11 @@
     {
         <tr>
             <td> @Html.DisplayTextFor(modelItem => item.Name)</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="View" asp-route-id="@item.Id">View</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
         </tr>
     }
     </tbody>

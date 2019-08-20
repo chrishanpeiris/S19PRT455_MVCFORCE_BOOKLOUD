@@ -112,10 +112,27 @@ namespace BookStoreApp.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var book = await _db.Book.FindAsync(id);
-            _db.Book.Remove(book);
-            await _db.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            _db.Book.Remove(book); // delete method 
+            await _db.SaveChangesAsync(); // wait for the response from the backend
+            return RedirectToAction(nameof(Index)); // redirect to index
 
+        }
+
+        public async Task<IActionResult> View(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var book = await _db.Book
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (book == null)
+            {
+                return NotFound();
+            }
+
+            return View(book);
         }
 
         private bool BooksExist(int id)
