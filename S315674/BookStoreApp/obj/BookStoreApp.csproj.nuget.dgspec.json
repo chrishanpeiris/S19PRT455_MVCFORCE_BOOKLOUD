@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Theshan Ranathunga\\source\\repos\\BookStoreApp\\BookStoreApp\\BookStoreApp.csproj": {}
+    "D:\\PRT455\\S315674\\BookStoreApp\\BookStoreApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Theshan Ranathunga\\source\\repos\\BookStoreApp\\BookStoreApp\\BookStoreApp.csproj": {
+    "D:\\PRT455\\S315674\\BookStoreApp\\BookStoreApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Theshan Ranathunga\\source\\repos\\BookStoreApp\\BookStoreApp\\BookStoreApp.csproj",
+        "projectUniqueName": "D:\\PRT455\\S315674\\BookStoreApp\\BookStoreApp.csproj",
         "projectName": "BookStoreApp",
-        "projectPath": "C:\\Users\\Theshan Ranathunga\\source\\repos\\BookStoreApp\\BookStoreApp\\BookStoreApp.csproj",
+        "projectPath": "D:\\PRT455\\S315674\\BookStoreApp\\BookStoreApp.csproj",
         "packagesPath": "C:\\Users\\Theshan Ranathunga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Theshan Ranathunga\\source\\repos\\BookStoreApp\\BookStoreApp\\obj\\",
+        "outputPath": "D:\\PRT455\\S315674\\BookStoreApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
