@@ -12541,11 +12541,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\haihau\\Desktop\\PRT455_Group\\S308078\\BookStoreApp\\BookStoreApp\\BookStoreApp.csproj",
+      "projectUniqueName": "C:\\Users\\haihau\\Documents\\S19PRT455_MVCFORCE_BOOKLOUD\\S308078\\BookStoreApp\\BookStoreApp\\BookStoreApp.csproj",
       "projectName": "BookStoreApp",
-      "projectPath": "C:\\Users\\haihau\\Desktop\\PRT455_Group\\S308078\\BookStoreApp\\BookStoreApp\\BookStoreApp.csproj",
+      "projectPath": "C:\\Users\\haihau\\Documents\\S19PRT455_MVCFORCE_BOOKLOUD\\S308078\\BookStoreApp\\BookStoreApp\\BookStoreApp.csproj",
       "packagesPath": "C:\\Users\\haihau\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\haihau\\Desktop\\PRT455_Group\\S308078\\BookStoreApp\\BookStoreApp\\obj\\",
+      "outputPath": "C:\\Users\\haihau\\Documents\\S19PRT455_MVCFORCE_BOOKLOUD\\S308078\\BookStoreApp\\BookStoreApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
