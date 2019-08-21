@@ -1,0 +1,42 @@
+IMPORTANT: This is individual task and Every member must complete this task 
+ALL the code and steps must be committed to GIT repository use your Group git repository for this task
+ 
+1.	Create a folder with your student Id
+2.	Create a MVC Core web application  
+Application Name:  BookStoreApp
+3.	Confirm your app is running by building the app and execute your application(press play button)
+4.	Commit: Comment as initial setup  
+5.	Create Folder DAL and add the following classes 
+a.	Book: (ID, Name)
+b.	Printer: (ID, Name, Brand)
+6.	Commit: Comment as Creating DAL models
+7.	Create context class and commit: creating context
+Info:  public class Ef*****Context : DbContext   
+8.	Add connection string 
+a.	databaseName: BookStoreDB_Dev
+9.	Commit your changes 
+10.	Setup dependency injection to  context in the file startup.cs in the method ConfigureServices 
+Info: services.AddDbContext<Ef*****Context>
+                (options => 
+                options.UseSqlServer(Configuration.GetConnectionString
+                    ("EfDbconnectionString")
+11.	Commit your changes 
+12.	Add migration with appropriate name Ex: initialSetup
+13.	Commit your changes 
+14.	Run update database
+15.	Log-on to SSMS and confirm the database, tables, and select and check migration history table
+16.	Add more changes
+a.	Add property Name: Model to Printer class
+b.	Add new class Scanner(ID, Name, Model, Brand)
+17.	Commit your changes 
+18.	Add migration and update database
+19.	Commit your changes
+20.	Create a  book controller and add CRUD operations functionality to books using entity framework context
+DO NOT use scaffolding
+21.	Commit your changes
+22.	Create a  Printer controller and add CRUD operations functionality to Printer using entity framework context
+DO NOT use scaffolding
+23.	Commit your changes
+24.	Add links the newly created controllers and  actions to menu
+25.	Commit your changes
+12
