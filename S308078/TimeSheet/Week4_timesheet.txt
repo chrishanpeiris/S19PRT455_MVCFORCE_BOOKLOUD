@@ -1,0 +1,23 @@
+hour 1:  Reinstall Visual studio & all tools
+hour 2:  Reinstall Visual studio & all tools
+hour 3:  Create my github folder 
+hour 4:   Individual_Task2_Rock & Trello
+hour 5:    Task 2 : Created BookStoreApp -> Creating DAL models
+hour 6:    Search what is context
+hour 7:    Search the code for context and connection string
+hour 8:  Task 2 : completed until connection string
+hour 9:  Study method ConfigureServices
+hour 10:  Study method ConfigureServices
+hour 11:  Search the code for method ConfigureServices
+hour 12:  Too many stuff on internet, so I read a bit 
+hour 13: Task 2 : Add migration
+hour 14:  Start to Failed and don’t know
+hour 15:  Search on the internet for solutions
+hour 16:  Too many things comes up, but do not know how to use.
+hour 17:  Stock try to ask for help, but do not know how to describe the problem
+hour 18:  Chrishan start to help, so I back to the step connection string and try to debug
+hour 19:  Find out some mistakes, but still stuck at add-migration
+hour 20:  Shows Unable to create an object of type 'EfBridgeContext'. Add an implementation of 'IDesignTimeDbContextFactory<EfBridgeContext>
+hour 21:  Group discussion before class 
+hour 22:  Group discussion before class
+hour 23:  Group discussion before class
