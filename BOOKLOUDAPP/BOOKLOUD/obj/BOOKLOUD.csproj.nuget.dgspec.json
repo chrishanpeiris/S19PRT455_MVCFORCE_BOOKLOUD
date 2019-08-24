@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Chrishan\\source\\repos\\BOOKLOUD\\BOOKLOUD\\BOOKLOUD.csproj": {}
+    "C:\\Users\\Chrishan\\Documents\\S19PRT455_MVCFORCE_BOOKLOUD\\BOOKLOUDAPP\\BOOKLOUD\\BOOKLOUD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Chrishan\\source\\repos\\BOOKLOUD\\BOOKLOUD\\BOOKLOUD.csproj": {
+    "C:\\Users\\Chrishan\\Documents\\S19PRT455_MVCFORCE_BOOKLOUD\\BOOKLOUDAPP\\BOOKLOUD\\BOOKLOUD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Chrishan\\source\\repos\\BOOKLOUD\\BOOKLOUD\\BOOKLOUD.csproj",
+        "projectUniqueName": "C:\\Users\\Chrishan\\Documents\\S19PRT455_MVCFORCE_BOOKLOUD\\BOOKLOUDAPP\\BOOKLOUD\\BOOKLOUD.csproj",
         "projectName": "BOOKLOUD",
-        "projectPath": "C:\\Users\\Chrishan\\source\\repos\\BOOKLOUD\\BOOKLOUD\\BOOKLOUD.csproj",
+        "projectPath": "C:\\Users\\Chrishan\\Documents\\S19PRT455_MVCFORCE_BOOKLOUD\\BOOKLOUDAPP\\BOOKLOUD\\BOOKLOUD.csproj",
         "packagesPath": "C:\\Users\\Chrishan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Chrishan\\source\\repos\\BOOKLOUD\\BOOKLOUD\\obj\\",
+        "outputPath": "C:\\Users\\Chrishan\\Documents\\S19PRT455_MVCFORCE_BOOKLOUD\\BOOKLOUDAPP\\BOOKLOUD\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
