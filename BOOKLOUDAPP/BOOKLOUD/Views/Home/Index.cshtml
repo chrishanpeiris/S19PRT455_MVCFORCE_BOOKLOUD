@@ -2,7 +2,18 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+<header class="py-5 bg-image-full">
+    <div class="container h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+            <form class="mx-2 my-auto d-inline w-100" id="searchBar">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search by title, author, unit code or ISBN">
+                    <span class="input-group-append">
+                        <button class="btn btn-dark" type="button">Search</button>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+</header>
