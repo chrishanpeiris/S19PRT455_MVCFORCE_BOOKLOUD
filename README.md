@@ -20,7 +20,7 @@ BOOKLOUD web application is platform where students can resell their past textbo
 ```python
 Chrishan Peiris
 Theshan Ranatunga
-Shih Liang Fang
+Shih Liang Fang (Rock)
 ```
 
 
