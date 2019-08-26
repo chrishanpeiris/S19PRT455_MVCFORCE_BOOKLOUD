@@ -1,0 +1,23 @@
+hour 1:	 setting up group content (GitHub, Trello, Group name, Member details and Email)
+hour 2:	 source tree setup guide for the team
+hour 3:	 study .net core 2.2 (Linkedin Learning) (basics)
+hour 4:	 continuing with study .net core 2.2 (mvc from scratch / startup.cs / appsettings)
+hour 5:	 continuing with study .net core 2.2 (razor pages for views, tagHelpers)
+hour 6:	 continuing with study .net core 2.2 (razor syntax, _layout, renderbody section, models
+hour 7:	 continuing with study .net core 2.2 (razor syntax, _layout, renderbody section, models
+hour 8:	 continuing with study .net core 2.2 (entity framework)
+hour 9:	 continuing with study .net core 2.2 (entity framework)
+hour 10: week4 individual task
+hour 11: continuing week4 individual task
+hour 12: continuing week4 individual task
+hour 13: continuing week4 individual task
+hour 14: continuing week4 individual task
+hour 15: continuing week4 individual task
+hour 16: continuing week4 individual task
+hour 17: continuing week4 individual task
+hour 18: continuing week4 individual task
+hour 19: continuing week4 individual task
+hour 20: continuing week4 individual task
+hour 21: group discussion
+hour 22: group discussion
+hour 23: group discussion
