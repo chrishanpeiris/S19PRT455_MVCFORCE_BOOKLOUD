@@ -7487,7 +7487,6 @@
       "path": "runtime.native.system.net.http/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -7514,7 +7513,6 @@
       "path": "runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -12079,27 +12077,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Chrishan\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\haihau\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Chrishan\\source\\repos\\BOOKLOUD\\BOOKLOUD\\BOOKLOUD.csproj",
+      "projectUniqueName": "C:\\Users\\haihau\\Documents\\S19PRT455_MVCFORCE_BOOKLOUD\\BOOKLOUDAPP\\BOOKLOUD\\BOOKLOUD.csproj",
       "projectName": "BOOKLOUD",
-      "projectPath": "C:\\Users\\Chrishan\\source\\repos\\BOOKLOUD\\BOOKLOUD\\BOOKLOUD.csproj",
-      "packagesPath": "C:\\Users\\Chrishan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Chrishan\\source\\repos\\BOOKLOUD\\BOOKLOUD\\obj\\",
+      "projectPath": "C:\\Users\\haihau\\Documents\\S19PRT455_MVCFORCE_BOOKLOUD\\BOOKLOUDAPP\\BOOKLOUD\\BOOKLOUD.csproj",
+      "packagesPath": "C:\\Users\\haihau\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\haihau\\Documents\\S19PRT455_MVCFORCE_BOOKLOUD\\BOOKLOUDAPP\\BOOKLOUD\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Chrishan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\haihau\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
