@@ -4,6 +4,40 @@
     ViewBag.Title = "title";
     Layout = "_Layout";
 }
-<div class="container pt-3">
-<h2>My Books</h2>
-</div>
+    <div class="container pt-3">
+        <h2>My Book</h2><a class="nav-link" asp-controller="User" asp-action="Index">>Back</a>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Book ID</th>
+                    <th scope="col">Book name</th>
+                    <th scope="col">Price (AU)</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Software Engineering</td>
+                    <td>60</td>
+                    <td>Listed</td>
+                    <td><a href="#" class="removeLink">Remove</a></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Mythical Man Month</td>
+                    <td>60</td>
+                    <td>Sold</td>
+                    <td><a href="#" class="removeLink">Remove</a></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Entrepreneurship</td>
+                    <td>80</td>
+                    <td>Requested</td>
+                    <td><a href="#" class="removeLink">Remove</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
