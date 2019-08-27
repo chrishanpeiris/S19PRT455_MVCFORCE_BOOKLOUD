@@ -27,6 +27,10 @@ namespace BOOKLOUD.Controllers.User
         {
             return View();
         }
+        public IActionResult ViewBooks()
+        {
+            return View();
+        }
 
     }
 
