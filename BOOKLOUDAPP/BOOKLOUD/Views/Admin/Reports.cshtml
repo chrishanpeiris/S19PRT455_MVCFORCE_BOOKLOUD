@@ -1,9 +1,54 @@
 ﻿@model object
 
 @{
-    ViewBag.Title = "title";
+    ViewBag.Title = "Reports";
     Layout = "_Layout";
 }
 <div class="container pt-3">
-<h2>Reports</h2>
+    <h2>Reportst</h2><a class="nav-link" asp-controller="User" asp-action="Index">>Back</a>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">Report Code</th>
+            <th scope="col">Report Type</th>
+            <th scope="col">Sector</th>
+            <th scope="col">Availability</th>
+            <th scope="col">View/Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">R1</th>
+            <td>Logged Users</td>
+            <td>User</td>
+            <td>Yes</td>
+            <td><a asp-action="ViewBooks">View</a><a>|</a><a href="#" class="removeLink">Remove</a></td>
+        </tr>
+        <tr>
+            <th scope="row">R2</th>
+            <td>Sale Count</td>
+            <td>User</td>
+            <td>Yes</td>
+            <td><a asp-action="ViewBooks">View</a><a>|</a><a href="#" class="removeLink">Remove</a></td>
+        </tr>
+        <tr>
+            <th scope="row">R3</th>
+            <td>Reviews and Comments</td>
+            <td>User</td>
+            <td>No</td>
+            <td><a asp-action="ViewBooks">View</a><a>|</a><a href="#" class="removeLink">Remove</a></td>
+        </tr>
+
+
+        </tbody>
+    </table>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+    </nav>
 </div>
