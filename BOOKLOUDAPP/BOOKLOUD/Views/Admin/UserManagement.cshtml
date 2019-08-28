@@ -5,7 +5,7 @@
     Layout = "_Layout";
 }
 <div class="container pt-3">
-    <h2>User Management</h2><a class="nav-link" asp-controller="User" asp-action="Index">>Back</a>
+    <h2>User Management</h2>
     <table class="table table-striped">
         <thead>
             <tr>
@@ -22,21 +22,21 @@
                 <td>Rom Bacardi</td>
                 <td>rombarcadi@gmail.com</td>
                 <td>user</td>
-                <td><a asp-action="ViewBooks">View</a><a>|</a><a href="#" class="removeLink">Remove</a></td>
+                <td><a asp-action="UserManagement">View</a><a>|</a><a href="#" class="removeLink">Remove</a></td>
             </tr>
         <tr>
             <th scope="row">2</th>
             <td>John Wick</td>
             <td>johnwick@gmail.com</td>
             <td>user</td>
-            <td><a asp-action="ViewBooks">View</a><a>|</a><a href="#" class="removeLink">Remove</a></td>
+            <td><a asp-action="UserManagement">View</a><a>|</a><a href="#" class="removeLink">Remove</a></td>
         </tr>
         <tr>
             <th scope="row">3</th>
             <td>Helena Alice</td>
             <td>helena@gmail.com</td>
             <td>user</td>
-            <td><a asp-action="ViewBooks">View</a><a>|</a><a href="#" class="removeLink">Remove</a></td>
+            <td><a asp-action="UserManagement">View</a><a>|</a><a href="#" class="removeLink">Remove</a></td>
         </tr>
             
         </tbody>
@@ -49,5 +49,6 @@
             <li class="page-item"><a class="page-link" href="#">3</a></li>
             <li class="page-item"><a class="page-link" href="#">Next</a></li>
         </ul>
+        <a class="nav-link" asp-controller="Admin" asp-action="Index">>Back</a>
     </nav>
 </div>

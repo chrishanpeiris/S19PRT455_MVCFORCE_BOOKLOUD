@@ -5,7 +5,7 @@
     Layout = "_Layout";
 }
 <div class="container pt-3">
-    <h2>Reportst</h2><a class="nav-link" asp-controller="User" asp-action="Index">>Back</a>
+    <h2>Reports</h2>
     <table class="table table-striped">
         <thead>
         <tr>
@@ -36,7 +36,7 @@
             <td>Reviews and Comments</td>
             <td>User</td>
             <td>No</td>
-            <td><a asp-action="ViewBooks">View</a><a>|</a><a href="#" class="removeLink">Remove</a></td>
+            <td><a asp-action="Reports">View</a><a>|</a><a href="#" class="removeLink">Remove</a></td>
         </tr>
 
 
@@ -50,5 +50,6 @@
             <li class="page-item"><a class="page-link" href="#">3</a></li>
             <li class="page-item"><a class="page-link" href="#">Next</a></li>
         </ul>
+        <a class="nav-link" asp-controller="Admin" asp-action="Index">>Back</a>
     </nav>
 </div>

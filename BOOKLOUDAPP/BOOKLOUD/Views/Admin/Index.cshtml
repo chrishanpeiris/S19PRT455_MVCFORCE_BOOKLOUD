@@ -1,11 +1,41 @@
-﻿@model object
+﻿
+@model object
 
 @{
     ViewBag.Title = "Admin Panel";
     Layout = "_Layout";
 }
-    <div class="container pt-3">
-        <a asp-action="UserManagement">User Management</a> <br />
-        <a asp-action="UnitManagement">Unit Management</a><br />
-        <a asp-action="Reports">Generate Reports</a>
+
+<div class="container pt-3">
+<h2>Admin Panel</h2>
+<div class="container">
+    <div class="row" align="justify">
+        <div class="col-sm-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Manage User</h5>
+                    
+                    <a asp-controller="Admin" asp-action="UserManagement" class="btn btn-primary">View</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"> Manage Units</h5>
+                   
+                    <a asp-controller="Admin" asp-action="UnitManagement" class="btn btn-primary">View</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Generate Reports</h5>
+                    
+                    <a asp-controller="Admin" asp-action="Reports" class="btn btn-primary">View</a>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
