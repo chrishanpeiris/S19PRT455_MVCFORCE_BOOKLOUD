@@ -1,4 +1,9 @@
-﻿@using Microsoft.AspNetCore.Identity
+﻿@using System.Security.Claims
+@using Microsoft.AspNetCore.Identity
+
+@functions {
+    public ClaimsPrincipal Admin { get; }
+}
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
 <!DOCTYPE html>
@@ -133,6 +138,7 @@
         </div>
     </div>
 </div>
+
 
 <footer class="border-top footer text-muted">
         <div class="container">
