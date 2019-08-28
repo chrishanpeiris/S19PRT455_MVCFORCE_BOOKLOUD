@@ -16,44 +16,44 @@
             <a class="dropdown-item" a asp-action="PurchaseHistory">Purchase History</a>
         </div>
     </div>
+
 </div><br/>
       <div class="container pt-3">
           <h2>Recent Activities</h2>
-          <a class="nav-link" asp-controller="Home" asp-action="Index">>Back</a>
           <table class="table">
               <thead class="thead-dark">
-                  <tr>
-                      <th scope="col">Book ID</th>
-                      <th scope="col">Book name</th>
-                      <th scope="col">Price (AU)</th>
-                      <th scope="col">Status</th>
-                  </tr>
+              <tr>
+                  <th scope="col">Book ID</th>
+                  <th scope="col">Book name</th>
+                  <th scope="col">Price (AU)</th>
+                  <th scope="col">Status</th>
+              </tr>
               </thead>
               <tbody>
-                  <tr>
-                      <th scope="row">1</th>
-                      <td>Software Engineering</td>
-                      <td>60</td>
-                      <td>Sold</td>
-                  </tr>
-                  <tr>
-                      <th scope="row">2</th>
-                      <td>Sustainability</td>
-                      <td>70</td>
-                      <td>Bought</td>
-                  </tr>
-                  <tr>
-                      <th scope="row">3</th>
-                      <td>Mythical Man Month</td>
-                      <td>60</td>
-                      <td>Listed</td>
-                  </tr>
-                  <tr>
-                      <th scope="row">4</th>
-                      <td>Entrepreneurship</td>
-                      <td>80</td>
-                      <td>Requested</td>
-                  </tr>
+              <tr>
+                  <th scope="row">1</th>
+                  <td>Software Engineering</td>
+                  <td>60</td>
+                  <td>Sold</td>
+              </tr>
+              <tr>
+                  <th scope="row">2</th>
+                  <td>Sustainability</td>
+                  <td>70</td>
+                  <td>Bought</td>
+              </tr>
+              <tr>
+                  <th scope="row">3</th>
+                  <td>Mythical Man Month</td>
+                  <td>60</td>
+                  <td>Listed</td>
+              </tr>
+              <tr>
+                  <th scope="row">4</th>
+                  <td>Entrepreneurship</td>
+                  <td>80</td>
+                  <td>Requested</td>
+              </tr>
               </tbody>
           </table>
       </div><br />
@@ -106,13 +106,5 @@
                         </div>
                     </div>
                 </div>
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                    </ul>
-                </nav>
+                <a class="nav-link" asp-controller="Home" asp-action="Index">>Back</a>
             </div>
