@@ -32,6 +32,16 @@ namespace BOOKLOUD.Controllers.User
             return View();
         }
 
+        public IActionResult UpdateBooks()
+        {
+            return View();
+        }
+
+        public IActionResult RemoveBooks()
+        {
+            return View();
+        }
+
     }
 
 
