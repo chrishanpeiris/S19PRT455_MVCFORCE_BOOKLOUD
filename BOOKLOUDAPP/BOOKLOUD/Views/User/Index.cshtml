@@ -7,112 +7,77 @@
 
 <div class="container pt-3">
     <h2>My Store</h2>
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Select Other Pages
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" a asp-action="ListedBooks">My Books</a>
-            <a class="dropdown-item" a asp-action="PurchaseHistory">Purchase History</a>
+<div class="container">
+    <div class="row">
+    <div class="card border-primary mb-3" style="max-width: 20rem;">
+        <div class="card-body">
+            <h4 class="card-title">Recent Activity</h4>
+            <p class="card-text">You will find all activities that you have done or still ongoing.</p>
+            <a asp-controller="User" asp-action="RecentActivities" class="btn btn-primary">View</a>
         </div>
     </div>
-</div><br/>
-      <div class="container pt-3">
-          <h2>Recent Activities</h2>
-          <a class="nav-link" asp-controller="Home" asp-action="Index">>Back</a>
-          <table class="table">
-              <thead class="thead-dark">
-                  <tr>
-                      <th scope="col">Book ID</th>
-                      <th scope="col">Book name</th>
-                      <th scope="col">Price (AU)</th>
-                      <th scope="col">Status</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <th scope="row">1</th>
-                      <td>Software Engineering</td>
-                      <td>60</td>
-                      <td>Sold</td>
-                  </tr>
-                  <tr>
-                      <th scope="row">2</th>
-                      <td>Sustainability</td>
-                      <td>70</td>
-                      <td>Bought</td>
-                  </tr>
-                  <tr>
-                      <th scope="row">3</th>
-                      <td>Mythical Man Month</td>
-                      <td>60</td>
-                      <td>Listed</td>
-                  </tr>
-                  <tr>
-                      <th scope="row">4</th>
-                      <td>Entrepreneurship</td>
-                      <td>80</td>
-                      <td>Requested</td>
-                  </tr>
-              </tbody>
-          </table>
-      </div><br />
-
-            <div class="container">
-                <p>
-                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                        Find other textbooks in Bookloud
-                    </button>
-                </p>
-                <div class="collapse" id="collapseExample">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Book 1</h5>
-                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                        <a asp-controller="User" asp-action="ViewBooks" class="btn btn-primary">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Book 2</h5>
-                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                        <a asp-controller="User" asp-action="ViewBooks" class="btn btn-primary">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Book 3</h5>
-                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                        <a asp-controller="User" asp-action="ViewBooks" class="btn btn-primary">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Book 4</h5>
-                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                        <a asp-controller="User" asp-action="ViewBooks" class="btn btn-primary">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                    </ul>
-                </nav>
+    <div class="card border-primary mb-3" style="max-width: 20rem;">
+        <div class="card-body">
+            <h4 class="card-title">My Books</h4>
+            <p class="card-text">You will find all books that you listed or sold here.</p>
+            <a asp-controller="User" asp-action="ListedBooks" class="btn btn-primary">View</a>
+        </div>
+    </div>
+        <div class="card border-primary mb-3" style="max-width: 20rem;">
+            <div class="card-body">
+                <h4 class="card-title">Purchases</h4>
+                <p class="card-text">You will find all books that you have bought here.</p>
+                <a asp-controller="User" asp-action="PurchaseHistory" class="btn btn-primary">View</a>
             </div>
+        </div>
+    </div>
+</div>
+          <div class="container">
+              <p>
+                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                      Find other textbooks in Bookloud
+                  </button>
+              </p>
+              <div class="collapse" id="collapseExample">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-sm-3">
+                              <div class="card">
+                                  <div class="card-body">
+                                      <h5 class="card-title">Book 1</h5>
+                                      <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                      <a asp-controller="User" asp-action="ViewBooks" class="btn btn-primary">View</a>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-sm-3">
+                              <div class="card">
+                                  <div class="card-body">
+                                      <h5 class="card-title">Book 2</h5>
+                                      <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                      <a asp-controller="User" asp-action="ViewBooks" class="btn btn-primary">View</a>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-sm-3">
+                              <div class="card">
+                                  <div class="card-body">
+                                      <h5 class="card-title">Book 3</h5>
+                                      <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                      <a asp-controller="User" asp-action="ViewBooks" class="btn btn-primary">View</a>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-sm-3">
+                              <div class="card">
+                                  <div class="card-body">
+                                      <h5 class="card-title">Book 4</h5>
+                                      <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                      <a asp-controller="User" asp-action="ViewBooks" class="btn btn-primary">View</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>

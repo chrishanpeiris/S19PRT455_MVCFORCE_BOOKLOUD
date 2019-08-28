@@ -17,12 +17,16 @@ namespace BOOKLOUD.Controllers.User
         
     }
 
+        public IActionResult RecentActivities()
+        {
+
+            return View();
+        }
         public IActionResult PurchaseHistory()
         {
 
             return View();
         }
-
         public IActionResult ListedBooks()
         {
             return View();
