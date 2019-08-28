@@ -83,3 +83,7 @@ body {
     #searchBar input:-ms-input-placeholder {
         font-style: italic;
     }
+.bookImg {
+    height: 350px;
+    width: 280px;
+}
