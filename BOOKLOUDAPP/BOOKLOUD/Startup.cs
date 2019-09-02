@@ -93,37 +93,24 @@ namespace BOOKLOUD
                 var roleExist = await RoleManager.RoleExistsAsync(roleName);
                 if (!roleExist)
                 {
-                    //create the roles and seed them to the database: Question 1  
+                    //create the roles and seed them to the database
                     roleResult = await RoleManager.CreateAsync(new IdentityRole(roleName));
                 }
             }
 
-            IdentityUser user = await UserManager.FindByEmailAsync("jignesh@gmail.com");
+            IdentityUser user = await UserManager.FindByEmailAsync("admin@bookloud.com.au");
 
             if (user == null)
             {
                 user = new IdentityUser()
                 {
-                    UserName = "jignesh@gmail.com",
-                    Email = "jignesh@gmail.com",
+                    UserName = "admin@bk.com",
+                    Email = "admin@bk.com"
                 };
-                await UserManager.CreateAsync(user, "Test@123");
+                await UserManager.CreateAsync(user, "Admin@123");
             }
             await UserManager.AddToRoleAsync(user, "Admin");
 
-
-            IdentityUser user1 = await UserManager.FindByEmailAsync("tejas@gmail.com");
-
-            if (user1 == null)
-            {
-                user1 = new IdentityUser()
-                {
-                    UserName = "tejas@gmail.com",
-                    Email = "tejas@gmail.com",
-                };
-                await UserManager.CreateAsync(user1, "Test@123");
-            }
-            await UserManager.AddToRoleAsync(user1, "User");
         }
     }
 }

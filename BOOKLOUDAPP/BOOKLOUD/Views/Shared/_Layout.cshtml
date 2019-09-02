@@ -39,18 +39,12 @@
                     <ul class="navbar-nav flex-grow-1">
                        @if (SignInManager.IsSignedIn(User))
                         {
-                            @if (User.Identity.Name == "admin@bookloud.com")
+                            @if (User.IsInRole("Admin"))
                             {
                                 <li class="nav-item">
                                     <a class="nav-link" asp-controller="Admin" asp-action="Index">Admin Panel</a>
                                 </li>
                             }
-                            @if (User.Identity.Name == "jignesh@gmail.com")
-                             {
-                                 <li class="nav-item">
-                                     <a class="nav-link" asp-controller="Admin" asp-action="Index">Admin Panel</a>
-                                 </li>
-                             }
                             <li class="nav-item">
                                 <a class="nav-link" data-toggle="modal" data-target="#addBookModal" href="#">Add Books</a>
                             </li>
