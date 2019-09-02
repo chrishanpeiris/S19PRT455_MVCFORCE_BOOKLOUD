@@ -85,7 +85,7 @@ namespace BOOKLOUD
             //initializing custom roles   
             var RoleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
             var UserManager = serviceProvider.GetRequiredService<UserManager<IdentityUser>>();
-            string[] roleNames = { "Admin", "User", "HR" };
+            string[] roleNames = { "Admin", "User"};
             IdentityResult roleResult;
 
             foreach (var roleName in roleNames)
@@ -124,20 +124,6 @@ namespace BOOKLOUD
                 await UserManager.CreateAsync(user1, "Test@123");
             }
             await UserManager.AddToRoleAsync(user1, "User");
-
-            IdentityUser user2 = await UserManager.FindByEmailAsync("rakesh@gmail.com");
-
-            if (user2 == null)
-            {
-                user2 = new IdentityUser()
-                {
-                    UserName = "rakesh@gmail.com",
-                    Email = "rakesh@gmail.com",
-                };
-                await UserManager.CreateAsync(user2, "Test@123");
-            }
-            await UserManager.AddToRoleAsync(user2, "HR");
-
         }
     }
 }
