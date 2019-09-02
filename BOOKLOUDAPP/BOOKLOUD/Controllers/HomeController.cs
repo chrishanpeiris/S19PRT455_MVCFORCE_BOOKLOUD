@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using BOOKLOUD.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BOOKLOUD.Controllers
 {
@@ -14,7 +15,7 @@ namespace BOOKLOUD.Controllers
         {
             return View();
         }
-
+        [Authorize]
         public IActionResult Privacy()
         {
             return View();
