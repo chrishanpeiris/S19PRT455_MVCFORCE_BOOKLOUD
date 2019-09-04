@@ -41,10 +41,6 @@ namespace BOOKLOUD.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
-            [Display(Name = "User Name")]
-            public String UserName { get; set; }
-
-            [Required]
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
@@ -71,7 +67,7 @@ namespace BOOKLOUD.Areas.Identity.Pages.Account
             returnUrl = returnUrl ?? Url.Content("~/");
             if (ModelState.IsValid)
             {
-                var user = new IdentityUser { UserName = Input.UserName, Email = Input.Email };
+                var user = new IdentityUser { UserName = Input.Email, Email = Input.Email };
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 await _userManager.AddToRoleAsync(user, "User");
                 if (result.Succeeded)
