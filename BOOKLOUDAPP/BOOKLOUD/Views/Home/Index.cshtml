@@ -79,7 +79,7 @@
 
             <!-- Modal body -->
             <div class="modal-body">
-                <form asp-controller="AddBook" asp-action="Create" method="post">
+                <form asp-controller="AddBook" asp-action="Create" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="bookTitle" asp-for="BookName">Book Title</label>
                         <input asp-for="BookName" type="text" class="form-control" id="bookTitle" placeholder="Enter book title">
