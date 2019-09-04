@@ -113,24 +113,24 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="unitCodeName">Unit</label>
-                        <select id="unitCodeName" class="form-control">
+                        <label asp-for="UnitName" for="unitCodeName">Unit</label>
+                        <select asp-for="UnitName" id="unitCodeName" class="form-control">
                             <option>PRT455 - Software Engineering Practice</option>
                             <option>PRT820 - Master Thesis</option>
                             <option>DLF544 - Web Technologies</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="bookImage">Book Image</label>
-                        <input type="file" class="form-control-file" id="bookImage">
+                        <label asp-for="BookImage" for="bookImage">Book Image</label>
+                        <input asp-for="BookImage" type="file" class="form-control-file" id="bookImage">
                     </div>
                     <div class="form-group">
-                        <label for="bookPrice">Book Price</label>
-                        <input type="text" class="form-control" id="bookPrice" placeholder="Enter Book Price" required="true">
+                        <label asp-for="BookPrice" for="bookPrice">Book Price</label>
+                        <input asp-for="BookPrice" type="text" class="form-control" id="bookPrice" placeholder="Enter Book Price" required="true">
                     </div>
                     <div class="form-group">
-                        <label for="bookISBN">Book Description</label>
-                        <textarea class="form-control" id="bookISBN" placeholder="Enter book description"></textarea>
+                        <label asp-for="BookDescription" for="bookDescription">Book Description</label>
+                        <textarea asp-for="BookDescription" class="form-control" id="bookDescription" placeholder="Enter book description"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
