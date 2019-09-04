@@ -16,7 +16,10 @@ namespace BOOKLOUD.Data
         public string BookISBN { get; set; }
         public string UniversityLocation { get; set; }
         public string CourseName { get; set; }
-
+        public string UnitName { get; set; }
+        public string BookImage { get; set; }
+        public int BookPrice { get; set; }
+        public string BookDescription { get; set; }
     }
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
