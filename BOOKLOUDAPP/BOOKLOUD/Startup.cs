@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using BOOKLOUD.Data;
+using BOOKLOUD.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
@@ -42,7 +43,7 @@ namespace BOOKLOUD
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddIdentity<IdentityUser, IdentityRole>()
+            services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
@@ -84,7 +85,7 @@ namespace BOOKLOUD
         {
             //initializing custom roles   
             var RoleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-            var UserManager = serviceProvider.GetRequiredService<UserManager<IdentityUser>>();
+            var UserManager = serviceProvider.GetRequiredService<UserManager<ApplicationUser>>();
             string[] roleNames = { "Admin", "User"};
             IdentityResult roleResult;
 
@@ -98,11 +99,11 @@ namespace BOOKLOUD
                 }
             }
 
-            IdentityUser user = await UserManager.FindByEmailAsync("admin@bookloud.com.au");
+            ApplicationUser user = await UserManager.FindByEmailAsync("admin@bk.com");
 
             if (user == null)
             {
-                user = new IdentityUser()
+                user = new ApplicationUser()
                 {
                     UserName = "admin@bk.com",
                     Email = "admin@bk.com"
