@@ -89,24 +89,24 @@
                         <input type="text" asp-for="BookAuthor" class="form-control" id="bookAuthor" placeholder="Enter author name">
                     </div>
                     <div class="form-group">
-                        <label for="bookAuthor">Author</label>
-                        <input type="text" class="form-control" id="bookAuthor" placeholder="Enter author name">
+                        <label for="bookAuthor" asp-for="BookEdition">Edition</label>
+                        <input type="text" asp-for="BookEdition" class="form-control" id="bookEdition" placeholder="Enter book edition">
                     </div>
                     <div class="form-group">
-                        <label for="bookISBN">ISBN</label>
-                        <input type="text" class="form-control" id="bookISBN" placeholder="Enter ISBN">
+                        <label for="bookISBN" asp-for="BookISBN">ISBN</label>
+                        <input type="text" asp-for="BookISBN" class="form-control" id="bookISBN" placeholder="Enter ISBN">
                     </div>
                     <div class="form-group">
-                        <label for="universityNameLocation">University</label>
-                        <select id="universityNameLocation" class="form-control">
+                        <label asp-for="UniversityLocation" for="universityNameLocation">University</label>
+                        <select asp-for="UniversityLocation" id="universityNameLocation" class="form-control">
                             <option>Charles Darwin University - Darwin</option>
                             <option>Swinburne University - Melbourne</option>
                             <option>La Trobe Univeristy - Sydny</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="courseName">Course</label>
-                        <select id="courseName" class="form-control">
+                        <label asp-for="CourseName" for="courseName">Course</label>
+                        <select asp-for="CourseName" id="courseName" class="form-control">
                             <option>Master of Information Technology (SE)</option>
                             <option>Master of Mechanical Engineering</option>
                             <option>Master of Data Science</option>

@@ -20,7 +20,7 @@ namespace BOOKLOUD.Controllers.Shared
         }
 
         [HttpPost] //post method
-        public async Task<IActionResult> Create([Bind("Id, BookName, BookISBN")] Book book)
+        public async Task<IActionResult> Create([Bind("Id, BookName, BookAuthor, BookEdition, BookISBN, UniversityLocation, CourseName")] Book book)
         {
             if (ModelState.IsValid)
             {
