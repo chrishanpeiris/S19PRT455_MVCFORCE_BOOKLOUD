@@ -31,9 +31,9 @@ namespace BOOKLOUD.Data.Migrations
 
                     b.Property<string>("BookEdition");
 
-                    b.Property<string>("BookISBN");
-
                     b.Property<string>("BookImage");
+
+                    b.Property<string>("BookIsbn");
 
                     b.Property<string>("BookName");
 

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BOOKLOUD.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190904063513_GenerateBookTable")]
-    partial class GenerateBookTable
+    [Migration("20190904145546_Book_Table")]
+    partial class Book_Table
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -33,9 +33,9 @@ namespace BOOKLOUD.Data.Migrations
 
                     b.Property<string>("BookEdition");
 
-                    b.Property<string>("BookISBN");
-
                     b.Property<string>("BookImage");
+
+                    b.Property<string>("BookIsbn");
 
                     b.Property<string>("BookName");
 
