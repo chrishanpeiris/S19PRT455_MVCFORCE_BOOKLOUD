@@ -79,10 +79,10 @@
 
             <!-- Modal body -->
             <div class="modal-body">
-                <form asp-controller="AddBook" asp-action="Create" method="post" enctype="multipart/form-data">
+                <form asp-action="Create" asp-controller="AddBook" enctype="multipart/form-data" method="post">
                     <div class="form-group">
                         <label for="bookTitle" asp-for="BookName">Book Title</label>
-                        <input asp-for="BookName" type="text" class="form-control" id="bookTitle" placeholder="Enter book title">
+                        <input asp-for="BookName" type="text" class="form-control" id="bookTitle" placeholder="Enter book title" required>
                     </div>
                     <div class="form-group">
                         <label for="bookAuthor" asp-for="BookAuthor">Author</label>
@@ -126,7 +126,7 @@
                     </div>
                     <div class="form-group">
                         <label asp-for="BookPrice" for="bookPrice">Book Price</label>
-                        <input asp-for="BookPrice" type="text" class="form-control" id="bookPrice" placeholder="Enter Book Price" required="true">
+                        <input asp-for="BookPrice" type="text" class="form-control" id="bookPrice" placeholder="Enter Book Price" required>
                     </div>
                     <div class="form-group">
                         <label asp-for="BookDescription" for="bookDescription">Book Description</label>
