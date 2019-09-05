@@ -11,7 +11,8 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace BOOKLOUD.Controllers.User
 {
-    public class UserController : Controller
+    [Authorize(Roles = "Admin, User")]
+    public class MyStoreController : Controller
     {
         // GET: /<controller>/
         public IActionResult Index()
@@ -30,7 +31,7 @@ namespace BOOKLOUD.Controllers.User
 
             return View();
         }
-        public IActionResult ListedBooks()
+        public IActionResult MyBooks()
         {
             return View();
         }
@@ -44,7 +45,7 @@ namespace BOOKLOUD.Controllers.User
             return View();
         }
 
-        public IActionResult RemoveBooks()
+        public IActionResult DeleteBooks()
         {
             return View();
         }

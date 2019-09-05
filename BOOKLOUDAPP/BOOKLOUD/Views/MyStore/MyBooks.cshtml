@@ -5,7 +5,7 @@
     Layout = "_Layout";
 }
     <div class="container pt-3">
-        <h2>My Book</h2><a class="nav-link" asp-controller="User" asp-action="Index">>Back</a>
+        <h2>My Book</h2><a class="nav-link" asp-controller="MyStore" asp-action="Index">>Back</a>
         <table class="table table-striped">
             <thead>
             <tr>
@@ -22,21 +22,21 @@
                     <td>Software Engineering</td>
                     <td>60</td>
                     <td>Listed</td>
-                    <td><a asp-action="ViewBooks">View</a><a> | </a><a class="removeLink" asp-action="RemoveBooks">Remove</a> | <a asp-action="UpdateBooks">Update</a></td>
+                    <td><a asp-action="ViewBooks">View</a><a> | </a><a class="removeLink" asp-action="DeleteBooks">Remove</a> | <a asp-action="UpdateBooks">Update</a></td>
                 </tr>
             <tr>
                 <th scope="row">2</th>
                 <td>Mythical Man Month</td>
                 <td>60</td>
                 <td>Sold</td>
-                <td><a asp-action="ViewBooks">View</a><a> | </a><a class="removeLink" asp-action="RemoveBooks">Remove</a> | <a asp-action="UpdateBooks">Update</a></td>
+                <td><a asp-action="ViewBooks">View</a><a> | </a><a class="removeLink" asp-action="DeleteBooks">Remove</a> | <a asp-action="UpdateBooks">Update</a></td>
             </tr>
             <tr>
                 <th scope="row">3</th>
                 <td>Entrepreneurship</td>
                 <td>80</td>
                 <td>Requested</td>
-                    <td><a asp-action="ViewBooks">View</a><a> | </a><a class="removeLink" asp-action="RemoveBooks">Remove</a> | <a asp-action="UpdateBooks">Update</a></td>
+                    <td><a asp-action="ViewBooks">View</a><a> | </a><a class="removeLink" asp-action="DeleteBooks">Remove</a> | <a asp-action="UpdateBooks">Update</a></td>
             </tr>
             </tbody>
         </table>

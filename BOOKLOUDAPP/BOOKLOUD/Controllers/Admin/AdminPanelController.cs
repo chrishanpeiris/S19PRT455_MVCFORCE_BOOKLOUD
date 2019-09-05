@@ -12,7 +12,7 @@ namespace BOOKLOUD.Controllers.Admin
 {
 
     [Authorize(Roles = "Admin")]
-    public class AdminController : Controller
+    public class AdminPanelController : Controller
     {
         // GET: /<controller>/
         public IActionResult Index()
@@ -21,6 +21,11 @@ namespace BOOKLOUD.Controllers.Admin
         }
 
         public IActionResult UserManagement()
+        {
+            return View();
+        }
+
+        public IActionResult UserInfo()
         {
             return View();
         }

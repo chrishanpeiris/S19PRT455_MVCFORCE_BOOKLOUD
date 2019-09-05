@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using BOOKLOUD.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace BOOKLOUD.Controllers.Shared
+namespace BOOKLOUD.Controllers.User
 {
+    [Authorize(Roles = "Admin, User")]
     public class AddBookController : Controller
     {
         private ApplicationDbContext _db;
@@ -28,7 +26,7 @@ namespace BOOKLOUD.Controllers.Shared
                 await _db.SaveChangesAsync(); //wait for database response
             }
 
-            return RedirectToRoute("Default", new {Controller = "User", Action = "ListedBooks"});
+            return RedirectToRoute("Default", new {Controller = "MyStore", Action = "MyBooks"});
         }
     }
 
