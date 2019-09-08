@@ -66,14 +66,25 @@ body {
 .bg-image-full .row {
         margin: 0 !important;
 }
-#searchBar input {
-        height: 45px;
+
+.searchInput {
+    height: 45px;
+    border: none !important;
+}
+.searchInput:focus {
+    box-shadow: none !important;
 }
 
+.btn-white {
+    background: white;
+}
+.btn-white:focus {
+    box-shadow: none !important;
+}
 
 #searchBar input::-webkit-input-placeholder {
-        font-style: italic;
-    }
+    font-style: italic;
+}
     #searchBar input:-moz-placeholder {
         font-style: italic;
     }
@@ -83,6 +94,9 @@ body {
     #searchBar input:-ms-input-placeholder {
         font-style: italic;
     }
+#searchBar h1{
+    color: white;
+}
 .bookImg {
     height: 350px;
     width: 280px;
