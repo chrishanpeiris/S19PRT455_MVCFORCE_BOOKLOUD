@@ -1,0 +1,30 @@
+﻿@model IEnumerable<BOOKLOUD.Data.Book>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<div class="container p-3">
+    <h2>Search Results</h2>
+    
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Book Name</th>
+            <th>Book Author</th>
+            <th>Book ISBN</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td> @Html.DisplayTextFor(modelItem => item.BookName)</td>
+                <td> @Html.DisplayTextFor(modelItem => item.BookAuthor)</td>
+                <td> @Html.DisplayTextFor(modelItem => item.BookIsbn)</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

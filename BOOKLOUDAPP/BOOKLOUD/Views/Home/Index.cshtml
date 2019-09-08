@@ -7,12 +7,12 @@
     <header class="py-5 bg-image-full">
         <div class="container h-100">
             <div class="row h-100 justify-content-center align-items-center text-center">
-                <form class="mx-2 my-auto d-inline w-75" id="searchBar">
+                <form class="mx-2 my-auto d-inline w-75" id="searchBar" asp-controller="SearchBook" asp-action="Index">
                     <h1>Find a textbook</h1>
                     <div class="input-group">
-                        <input type="text" class="form-control searchInput" placeholder="Search by title, author, unit code or ISBN">
+                        <input type="text" class="form-control searchInput" name="SearchString" placeholder="Search by title, author, unit code or ISBN">
                         <span class="input-group-append">
-                            <button class="btn btn-white" type="button"><i class="fas fa-search"></i></button>
+                            <button class="btn btn-white" type="submit"><i class="fas fa-search"></i></button>
                         </span>
                     </div>
                 </form>
