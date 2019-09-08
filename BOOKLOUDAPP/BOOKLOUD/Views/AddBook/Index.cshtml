@@ -1,0 +1,67 @@
+﻿@model BOOKLOUD.Data.Book
+
+@{
+    ViewBag.Title = "Add Books";
+    Layout = "_Layout";
+}
+<div class="container pt-3">
+    <h2>Add Books</h2>
+
+    <section class="col-md-4 p-0">
+        <form asp-controller="AddBook" asp-action="Create" enctype="multipart/form-data" method="post">
+            <div class="form-group">
+                <label for="bookTitle" asp-for="BookName">Book Title</label>
+                <input asp-for="BookName" type="text" class="form-control" id="bookTitle" placeholder="Enter book title" required>
+            </div>
+            <div class="form-group">
+                <label for="bookAuthor" asp-for="BookAuthor">Author</label>
+                <input type="text" asp-for="BookAuthor" class="form-control" id="bookAuthor" placeholder="Enter author name">
+            </div>
+            <div class="form-group">
+                <label for="bookAuthor" asp-for="BookEdition">Edition</label>
+                <input type="text" asp-for="BookEdition" class="form-control" id="bookEdition" placeholder="Enter book edition">
+            </div>
+            <div class="form-group">
+                <label for="bookISBN" asp-for="BookIsbn">ISBN</label>
+                <input type="text" asp-for="BookIsbn" class="form-control" id="bookISBN" placeholder="Enter ISBN">
+            </div>
+            <div class="form-group">
+                <label asp-for="UniversityLocation" for="universityNameLocation">University</label>
+                <select asp-for="UniversityLocation" id="universityNameLocation" class="form-control">
+                    <option>Charles Darwin University - Darwin</option>
+                    <option>Swinburne University - Melbourne</option>
+                    <option>La Trobe Univeristy - Sydny</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="CourseName" for="courseName">Course</label>
+                <select asp-for="CourseName" id="courseName" class="form-control">
+                    <option>Master of Information Technology (SE)</option>
+                    <option>Master of Mechanical Engineering</option>
+                    <option>Master of Data Science</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="UnitName" for="unitCodeName">Unit</label>
+                <select asp-for="UnitName" id="unitCodeName" class="form-control">
+                    <option>PRT455 - Software Engineering Practice</option>
+                    <option>PRT820 - Master Thesis</option>
+                    <option>DLF544 - Web Technologies</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="BookImage" for="bookImage">Book Image</label>
+                <input asp-for="BookImage" type="file" class="form-control-file" id="bookImage">
+            </div>
+            <div class="form-group">
+                <label asp-for="BookPrice" for="bookPrice">Book Price</label>
+                <input asp-for="BookPrice" type="text" class="form-control" id="bookPrice" placeholder="Enter Book Price" required>
+            </div>
+            <div class="form-group">
+                <label asp-for="BookDescription" for="bookDescription">Book Description</label>
+                <textarea asp-for="BookDescription" class="form-control" id="bookDescription" placeholder="Enter book description"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </section>
+</div>

@@ -17,6 +17,11 @@ namespace BOOKLOUD.Controllers.User
             _db = db;
         }
 
+        public IActionResult Index()
+        {
+            return View();
+        }
+
         [HttpPost] //post method
         public async Task<IActionResult> Create([Bind("Id, BookName, BookAuthor, BookEdition, BookIsbn, UniversityLocation, CourseName, UnitName, BookImage, BookPrice, BookDescription")] Book book)
         {
