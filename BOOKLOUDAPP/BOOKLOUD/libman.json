@@ -5,6 +5,36 @@
     {
       "library": "font-awesome@5.10.2",
       "destination": "wwwroot/lib/font-awesome/"
+    },
+    {
+      "library": "jqueryui@1.12.1",
+      "destination": "wwwroot/lib/jqueryui/",
+      "files": [
+        "images/ui-icons_444444_256x240.png",
+        "images/ui-icons_555555_256x240.png",
+        "images/ui-icons_777620_256x240.png",
+        "images/ui-icons_777777_256x240.png",
+        "images/ui-icons_cc0000_256x240.png",
+        "images/ui-icons_ffffff_256x240.png",
+        "themes/base/images/ui-icons_ffffff_256x240.png",
+        "themes/base/images/ui-icons_cc0000_256x240.png",
+        "themes/base/images/ui-icons_777777_256x240.png",
+        "themes/base/images/ui-icons_777620_256x240.png",
+        "themes/base/images/ui-icons_555555_256x240.png",
+        "themes/base/images/ui-icons_444444_256x240.png",
+        "themes/base/theme.min.css",
+        "themes/base/theme.css",
+        "themes/base/jquery-ui.min.css",
+        "themes/base/jquery-ui.css",
+        "jquery-ui.css",
+        "jquery-ui.js",
+        "jquery-ui.min.css",
+        "jquery-ui.min.js",
+        "jquery-ui.structure.css",
+        "jquery-ui.structure.min.css",
+        "jquery-ui.theme.css",
+        "jquery-ui.theme.min.css"
+      ]
     }
   ]
 }
