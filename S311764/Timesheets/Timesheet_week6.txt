@@ -1,0 +1,40 @@
+hour 1:	 Group discussion (dividing activities for week 6 and 7)
+hour 2:	 continuing group discussion (brainstorm which controllers use by which person)
+hour 3:	 continuing group discussion (brainstorm how razor views manage by the group for different controllers)
+hour 4:	 Group pair coding (create add book model class and add manual migration to the database)
+hour 5:	 continuing Group pair coding (create add book model class and add manual migration to the database)
+hour 6:	 continuing Group pair coding (create add book model class and add manual migration to the database)
+hour 7:	 continuing Group pair coding (create add book model class and add manual migration to the database)
+hour 8:	 continuing Group pair coding (fixing issues in new migration)
+hour 9:	 continuing Group pair coding (fixing issues in new migration)
+hour 10: continuing Group pair coding (fixing issues in new migration)
+hour 11: Group discussion (discuss common issues)
+hour 11: continuing Group discussion
+hour 13: semester break & week6 individual task (Search books)
+hour 14: continuing semester break & week6 individual task (Search books)
+hour 15: continuing semester break & week6 individual task (Search books)
+hour 16: continuing semester break & week6 individual task (Search books)
+hour 17: continuing semester break & week6 individual task (Home page UI changes)
+hour 18: continuing semester break & week6 individual task (Add Book changes)
+hour 19: Teach how to fix some environment issues (for different group)
+hour 20: Teach how to add multiple actions for a controller and create views + how to copy standard Boostrap componenets (for different group)
+hour 21: Self-study how to implement two factor authentication
+hour 22: continuing Self-study how to implement two factor authentication
+hour 23: Implement two factor authentication
+hour 24: continuing Implement two factor authentication
+hour 25: continuing Implement two factor authentication
+hour 26: Add other Identity pages 
+hour 27: Modify Identity pages 
+hour 28: Fixing some conflict issues
+hour 29: Refactoring some controllers and views
+hour 30: Change add book dialog modal to normal view
+hour 31: continuing Change add book dialog modal to normal view
+hour 32: 
+hour 33: 
+hour 34: 
+hour 35: 
+hour 36: 
+hour 37: 
+hour 38: 
+hour 39: 
+hour 40: 
