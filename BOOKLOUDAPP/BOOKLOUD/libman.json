@@ -35,6 +35,11 @@
         "jquery-ui.theme.css",
         "jquery-ui.theme.min.css"
       ]
+    },
+    {
+      "provider": "filesystem",
+      "library": "qrcode/",
+      "destination": "wwwroot/lib/qrcode/"
     }
   ]
 }
