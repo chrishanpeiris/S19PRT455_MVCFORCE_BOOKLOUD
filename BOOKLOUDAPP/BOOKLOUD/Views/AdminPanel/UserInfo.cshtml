@@ -1,9 +1,18 @@
-﻿@model object
+﻿@model IEnumerable<BOOKLOUD.Models.ApplicationUser>
 
 @{
     ViewBag.Title = "title";
     Layout = "_Layout";
 }
-<div class="container">
-<h2>User details</h2>
+<div class="container p-3">
+    <h2>View User</h2>
+
+    <div>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.UserName)
+            </dt>
+        </dl>
+    </div>
 </div>
