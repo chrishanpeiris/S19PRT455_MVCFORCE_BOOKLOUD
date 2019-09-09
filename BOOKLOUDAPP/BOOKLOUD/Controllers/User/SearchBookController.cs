@@ -37,14 +37,6 @@ namespace BOOKLOUD.Controllers.User
             return View(await books.ToListAsync());
         }
 
-        [HttpPost]
-        public JsonResult AutoComplete(string Prefix)
-        {
-            var BookList = (from B in _db.Book.ToList()
-                where B.BookName.StartsWith(Prefix)
-                select new {B.BookName});
-            return Json(BookList);
-        }
     }
 
 }
