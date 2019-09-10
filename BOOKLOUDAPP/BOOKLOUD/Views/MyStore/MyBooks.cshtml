@@ -1,65 +1,65 @@
-﻿@model object
+﻿@model ApplicationUser
 
 @{
     ViewBag.Title = "My Book";
     Layout = "_Layout";
 }
-    <div class="container pt-3">
-        <h2>My Book</h2><a class="nav-link" asp-controller="MyStore" asp-action="Index">>Back</a>
-        <div class="container h-100">
-            <div class="row h-100 justify-content-center align-items-center text-center">
-                <form class="mx-2 my-auto d-inline w-75" id="searchBar" asp-controller="SearchBook" asp-action="Index">
-                    <h1>Find My Textbook</h1>
-                    <div class="input-group">
-                        <input id="bookName" type="text" class="form-control searchInput" name="SearchString" placeholder="Search by title, author, unit code or ISBN">
-                        <span class="input-group-append">
-                            <button class="btn btn-white" type="submit"><i class="fas fa-search"></i></button>
-                        </span>
-                    </div>
-                </form>
-            </div>
+<div class="container pt-3">
+    <h2>My Book</h2><a class="nav-link" asp-controller="MyStore" asp-action="Index">>Back</a>
+    <div class="container h-100">
+        <div class="row h-100 justify-content-center align-items-center text-center">
+            <form class="mx-2 my-auto d-inline w-75" id="searchBar" asp-controller="SearchBook" asp-action="Index">
+                <h1>Find My Textbook</h1>
+                <div class="input-group">
+                    <input id="bookName" type="text" class="form-control searchInput" name="SearchString" placeholder="Search by title, author, unit code or ISBN">
+                    <span class="input-group-append">
+                        <button class="btn btn-white" type="submit"><i class="fas fa-search"></i></button>
+                    </span>
+                </div>
+            </form>
         </div>
-        <table class="table table-striped">
-            <thead>
-            <tr>
-                <th scope="col">Book ID</th>
-                <th scope="col">Book name</th>
-                <th scope="col">Price (AU)</th>
-                <th scope="col">Status</th>
-                <th scope="col">View/Delete</th>
-            </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Software Engineering</td>
-                    <td>60</td>
-                    <td>Listed</td>
-                    <td><a asp-action="ViewBooks">View</a><a> | </a><a class="removeLink" asp-action="DeleteBooks">Remove</a> | <a asp-action="UpdateBooks">Update</a></td>
-                </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Mythical Man Month</td>
-                <td>60</td>
-                <td>Sold</td>
-                <td><a asp-action="ViewBooks">View</a><a> | </a><a class="removeLink" asp-action="DeleteBooks">Remove</a> | <a asp-action="UpdateBooks">Update</a></td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Entrepreneurship</td>
-                <td>80</td>
-                <td>Requested</td>
-                    <td><a asp-action="ViewBooks">View</a><a> | </a><a class="removeLink" asp-action="DeleteBooks">Remove</a> | <a asp-action="UpdateBooks">Update</a></td>
-            </tr>
-            </tbody>
-        </table>
-        <nav aria-label="Page navigation example">
-            <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-            </ul>
-        </nav>
     </div>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">Book ID</th>
+            <th scope="col">Book name</th>
+            <th scope="col">Price (AU)</th>
+            <th scope="col">Status</th>
+            <th scope="col">View/Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Software Engineering</td>
+            <td>60</td>
+            <td>Listed</td>
+            <td><a asp-action="ViewBooks">View</a><a> | </a><a class="removeLink" asp-action="DeleteBooks">Remove</a> | <a asp-action="UpdateBooks">Update</a></td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Mythical Man Month</td>
+            <td>60</td>
+            <td>Sold</td>
+            <td><a asp-action="ViewBooks">View</a><a> | </a><a class="removeLink" asp-action="DeleteBooks">Remove</a> | <a asp-action="UpdateBooks">Update</a></td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Entrepreneurship</td>
+            <td>80</td>
+            <td>Requested</td>
+            <td><a asp-action="ViewBooks">View</a><a> | </a><a class="removeLink" asp-action="DeleteBooks">Remove</a> | <a asp-action="UpdateBooks">Update</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+    </nav>
+</div>
