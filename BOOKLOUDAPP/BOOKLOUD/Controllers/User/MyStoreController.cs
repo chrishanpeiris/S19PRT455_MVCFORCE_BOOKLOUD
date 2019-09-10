@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -39,18 +40,12 @@ namespace BOOKLOUD.Controllers.User
         {
             return View();
         }
-        public IActionResult MyBooks()
+        public async Task<IActionResult> MyBooks()
         {
-            return View();
+            return View(await _db.Book.ToListAsync());
         }
         public IActionResult ViewBooks()
         {
-            var bookinfo = _db.Book.OrderBy(t=>t.BookName).
-                Select(t => new ApplicationUser
-                {
-                    FirstName = t.BookName,
-                      
-                }).ToList();
             return View();
         }
 
