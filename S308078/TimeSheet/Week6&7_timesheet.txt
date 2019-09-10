@@ -1,0 +1,23 @@
+hour 1:  Group discussion - on class edited theme
+hour 2:  Group discussion - on class Change page dispaly
+hour 3:  Group discussion - on class
+hour 4:  Group discussion - assign Task
+hour 5:  Group discussion - assign Task
+hour 6:  Work on Role Authentication
+hour 7:  Work on Role Authentication 
+hour 8:  Work on Role Authentication 
+hour 9:  Work on Role Authentication 
+hour 10: Work on Role Authentication updated
+hour 11: Group discussion - assign Task
+hour 12: Group discussion - assign Task
+hour 13: Group discussion - Add [BK_T20_Add_Books] Update Addook view and controller
+hour 14: Group discussion - [BK_T20_Add_Books] Update book model to applicationdbcontext
+hour 15: Work on BK_T27_View_BookList- add search function
+hour 16: Work on BK_T27_View_BookList- add search function Updated
+hour 17: Work on BK_T27_View_BookList
+hour 18: Work on BK_T27_View_BookList
+hour 19: Work on BK_T28_View_Book_Details
+hour 20: Work on BK_T28_View_Book_Details - Failed
+hour 21: Group discussion before class 
+hour 22: Group discussion before class
+hour 23: Group discussion before class
