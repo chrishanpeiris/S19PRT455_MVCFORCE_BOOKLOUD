@@ -26,6 +26,7 @@
                 <th scope="col">Book Name</th>
                 <th scope="col">Book Author</th>
                 <th scope="col">Price (AU)</th>
+                <th scope="col">View/Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -36,10 +37,12 @@
                 <td> @Html.DisplayTextFor(modelItem => item.BookName)</td>
                 <td> @Html.DisplayTextFor(modelItem => item.BookAuthor)</td>
                 <td> @Html.DisplayTextFor(modelItem => item.BookPrice)</td>
+                <td><a asp-action="ViewBooks">View</a><a> | </a><a class="removeLink" asp-action="DeleteBooks">Remove</a> | <a asp-action="UpdateBooks">Update</a></td>
             </tr>
             }
         </tbody>
     </table>
+
     <nav aria-label="Page navigation example">
         <ul class="pagination">
             <li class="page-item"><a class="page-link" href="#">Previous</a></li>
