@@ -44,7 +44,7 @@ namespace BOOKLOUD.Controllers.User
         {
             return View(await _db.Book.ToListAsync());
         }
-        public IActionResult ViewBooks()
+        public async Task<IActionResult> ViewBooks()
         {
             return View();
         }
