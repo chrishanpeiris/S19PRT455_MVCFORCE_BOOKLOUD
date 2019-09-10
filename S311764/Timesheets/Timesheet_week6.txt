@@ -29,12 +29,12 @@ hour 28: Fixing some conflict issues
 hour 29: Refactoring some controllers and views
 hour 30: Change add book dialog modal to normal view
 hour 31: continuing Change add book dialog modal to normal view
-hour 32: 
-hour 33: 
-hour 34: 
-hour 35: 
-hour 36: 
-hour 37: 
-hour 38: 
-hour 39: 
-hour 40: 
+hour 32: Created a guide how to retrive all database from database and view single records
+hour 33: Learn .NET core Identity features
+hour 34: Continuing Learn .NET core Identity features
+hour 35: Group Discussion (Assignment 2)
+hour 36: continuing Group Discussion (Assignment 2)
+hour 37: continuing Group Discussion (Divide task for next sprint)
+hour 38: Fixing issues
+hour 39: Searching a solution for search results not showing up
+hour 40: Searching a solution for search results not showing up
