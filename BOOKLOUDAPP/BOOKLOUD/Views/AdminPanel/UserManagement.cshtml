@@ -21,22 +21,22 @@
         <tbody>
             @foreach (var item in Model)
             {
-                <tr>
-                    <td> @Html.DisplayTextFor(modelItem => item.UserName)</td>
-                    <td> @Html.DisplayTextFor(modelItem => item.Email)</td>
-                    <td> @Html.DisplayTextFor(modelItem => item.PhoneNumber)</td>
-                    <td>
-                        @foreach (var role in await UserManager.GetRolesAsync(await UserManager.FindByNameAsync(item.UserName)))
-                        {
-                            @role
-                        }
+            <tr>
+                <td> @Html.DisplayTextFor(modelItem => item.UserName)</td>
+                <td> @Html.DisplayTextFor(modelItem => item.Email)</td>
+                <td> @Html.DisplayTextFor(modelItem => item.PhoneNumber)</td>
+                <td>
+                    @foreach (var role in await UserManager.GetRolesAsync(await UserManager.FindByNameAsync(item.UserName)))
+                    {
+                        @role
+                    }
 
-                    </td>
-                    <td>
-                        <a asp-action="UserInfo" asp-route-id="@item.Email">View</a> |
-                        <a asp-route-id="@item.Id">Suspend</a>
-                    </td>
-                </tr>
+                </td>
+                <td>
+                    <a asp-action="UserInfo" asp-route-id="@item.Email">View</a> |
+                    <a asp-route-id="@item.Id">Suspend</a>
+                </td>
+            </tr>
             }
         </tbody>
     </table>

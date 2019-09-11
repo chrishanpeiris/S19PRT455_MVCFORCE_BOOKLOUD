@@ -27,7 +27,10 @@ namespace BOOKLOUD.Controllers.Api
                 string term = HttpContext.Request.Query["term"].ToString();
                 var names = _db.Book.Where(b => b.BookName.Contains(term)).Select(b => new
                 {
-                    name = b.BookName
+                    id = b.Id,
+                    label = b.BookName,
+                    value = b.BookName
+
                 }).ToList();
                 return Ok(names);
             }

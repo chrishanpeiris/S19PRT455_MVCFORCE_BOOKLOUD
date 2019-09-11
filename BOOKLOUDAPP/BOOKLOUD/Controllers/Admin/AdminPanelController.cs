@@ -33,7 +33,7 @@ namespace BOOKLOUD.Controllers.Admin
             return View(await _db.Users.ToListAsync());
         }
 
-        public async Task<IActionResult> UserInfo(int? id)
+        public async Task<IActionResult> UserInfo(string id)
         {
             if (id == null)
             {
