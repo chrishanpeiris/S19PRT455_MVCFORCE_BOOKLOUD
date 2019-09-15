@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using BOOKLOUD.Data;
+using BOOKLOUD.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
