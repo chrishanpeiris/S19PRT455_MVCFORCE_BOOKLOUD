@@ -29,7 +29,8 @@ namespace BOOKLOUD.Controllers.Api
                 {
                     id = b.Id,
                     label = b.BookName,
-                    value = b.BookName
+                    value = b.BookName,
+                    imgPath = b.BookImage
 
                 }).ToList();
                 return Ok(names);

@@ -101,3 +101,15 @@ body {
     height: 350px;
     width: 280px;
 }
+.autoCompleteImg {
+    width: 75px;
+    height: 75px;
+    padding-right: 3px
+}
+
+.autoCompleteImg.ui-state-active{
+    border: none;
+    background: none !important;
+    font-weight: normal;
+    color: #fff
+}
