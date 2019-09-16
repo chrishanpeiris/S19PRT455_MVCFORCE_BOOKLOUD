@@ -14,5 +14,8 @@ namespace BOOKLOUD.Data
         {
         }
         public virtual DbSet<Book> Book { get; set; }
+        public DbSet<UniversityDetailsModel> University { get; set; }
+        public DbSet<CourseDetailsModel> Course { get; set; }
+        public DbSet<UnitDetailsModel> Unit { get; set; }
     }
 }
