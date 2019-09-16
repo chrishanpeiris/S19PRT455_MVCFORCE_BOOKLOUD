@@ -1,11 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using BOOKLOUD.Data;
 using BOOKLOUD.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -25,6 +28,7 @@ namespace BOOKLOUD.Controllers.User
 
         public IActionResult Index()
         {
+            ViewBag.universities = _db.University.ToList();
             return View();
         }
         /*
@@ -40,6 +44,13 @@ namespace BOOKLOUD.Controllers.User
             return RedirectToRoute("Default", new {Controller = "MyStore", Action = "MyBooks"});
         }*/
 
+        public JsonResult getcoursebyid(int id)
+        {
+            List<CourseDetailsModel> list =new List<CourseDetailsModel>();
+            list = _db.Course.Where(a => a.University.Id == id).ToList();
+            list.Insert(0, new CourseDetailsModel{Id=0, CourseName = "Please Select Course"});
+            return Json(new SelectList(list, "Id", "CourseName"));
+        }
 
         [HttpPost] //post method
         public async Task<IActionResult> Create(Book book)

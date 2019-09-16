@@ -8,5 +8,21 @@
                         .append('<img class="autoCompleteImg" src=' + '/img/book_img/' + item.imgPath + ' />')
                         .append(item.label)
                         .appendTo(ul);
-                };
+        };
+
+    $("#UniversityId").change(function() {
+        var url = "AddBook/getcoursebyid";
+        var ddlsource = "#UniversityId";
+        $.getJSON(url,
+            { id: $(ddlsource).val() },
+            function(data) {
+                var items = '';
+                $("#CourseId").empty();
+                $.each(data,
+                    function(i, row) {
+                        items += "<option value='" + row.value + "' >" + row.text + "</option>"
+                    });
+                $("#CourseId").html(items);
+            });
+    });
 })
