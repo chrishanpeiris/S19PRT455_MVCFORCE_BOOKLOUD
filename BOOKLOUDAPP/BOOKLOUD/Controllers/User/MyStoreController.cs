@@ -44,17 +44,21 @@ namespace BOOKLOUD.Controllers.User
         {
             return View(await _db.Book.ToListAsync());
         }
-        public async Task<IActionResult> ViewBooks(string id)
+        public async Task<IActionResult> ViewBooks(int? id)
         {
-            var books = from b in _db.Book
-                        select b;
-
-            if (!String.IsNullOrEmpty(id))
+            if (id == null)
             {
-                books = books.Where(s => s.BookName.Contains(id));
+                return NotFound();
             }
 
-            return View();
+            var book = await _db.Book
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (book == null)
+            {
+                return NotFound();
+            }
+
+            return View(book);
         }
 
         public IActionResult UpdateBooks()

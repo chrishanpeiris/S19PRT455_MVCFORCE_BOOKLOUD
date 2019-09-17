@@ -1,4 +1,4 @@
-﻿@model object
+﻿@model BOOKLOUD.Models.Book
 
 @{
     ViewBag.Title = "View Book";
@@ -9,26 +9,75 @@
     <h2>View Book</h2><a class="nav-link" asp-controller="MyStore" asp-action="MyBooks">>Back</a>
 </div>
 <section class="container">
-
-    <img src="~/img/book_img/Software Engineering_1.jpg" alt="" class=bookImg>
-    <img src="~/img/book_img/Software Engineering_2.jpg" alt="" class=bookImg>
-    <img src="~/img/book_img/Software Engineering_3.jpg" alt="" class=bookImg>
-
-    <div>
-        <span>Pearson</span>
-        <h2>Software Engineering, Global Edition</h2>
-        <p><strong>Price</strong> AU$60.00</p>
-        <h5>The Fundamental Practice of Software Engineering</h5>
-        <p class="product-desc">
-        <p><strong>Software Engineering</strong> introduces students to the overwhelmingly important subject of software programming and development. In the past few years, computer systems have come to dominate not just our technological growth, but the foundations of our world’s major industries. This text seeks to lay out the fundamental concepts of this huge and continually growing subject area in a clear and comprehensive manner.</p>
-        <p>The <strong>Tenth Edition</strong> contains new information that highlights various technological updates of recent years, providing students with highly relevant and current information. Sommerville’s experience in system dependability and systems engineering guides the text through a traditional plan-based approach that incorporates some novel agile methods. The text strives to teach the innovators of tomorrow how to create software that will make our world a better, safer, and more advanced place to live.</p>
-    </div>
-</section>
-<div>
-    <hr />
     <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BookName)
+        </dt>
         <dd class="col-sm-10">
-            <td> 123</td>
+            @Html.DisplayFor(model => model.BookName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BookAuthor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BookAuthor)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BookEdition)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BookEdition)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BookIsbn)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BookIsbn)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UniversityLocation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UniversityLocation)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CourseName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CourseName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UnitName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UnitName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BookImage)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BookImage)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BookPrice)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BookPrice)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BookDescription)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BookDescription)
         </dd>
     </dl>
-</div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+    </div>
+    <br />
+    <div>
+        <a asp-action="MyBooks"><i class="far fa-arrow-alt-circle-left"></i> Back to MyBooks</a>
+    </div>
+
+</section>
+

@@ -6,7 +6,7 @@
 }
 <div class="container pt-3">
     <h2>My Book</h2>
-    <a class="nav-link" asp-controller="Home" asp-action="Index"><i class="far fa-arrow-alt-circle-left"></i> Back to Home Page.</a>
+    <a class="nav-link" asp-controller="MyStore" asp-action="Index"><i class="far fa-arrow-alt-circle-left"></i> Back to My Store.</a>
  <table class="table table-striped">
         <thead>
             <tr>
@@ -27,7 +27,7 @@
                 <td> @Html.DisplayTextFor(modelItem => item.BookPrice)</td>
                 <td>
                     @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                    <a asp-action="ViewBooks">View</a> |
+                    <a asp-action="ViewBooks" asp-route-id="@item.Id">View</a> |
                     @Html.ActionLink("Remove", "Remove", new { id = item.Id })                
                 </td>
             </tr>
