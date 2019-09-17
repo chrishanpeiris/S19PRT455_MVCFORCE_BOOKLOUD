@@ -71,8 +71,8 @@ namespace BOOKLOUD.Controllers.User
             return View();
         }
 
-        // GET: Books/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        // GET: EditBooks
+        public async Task<IActionResult> EditBooks(int? id)
         {
             if (id == null)
             {
@@ -87,12 +87,12 @@ namespace BOOKLOUD.Controllers.User
             return View(book);
         }
 
-        // POST: Books/Edit/5
+        // POST: EditBooks
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,BookName,BookAuthor,BookEdition,BookIsbn,UniversityLocation,CourseName,UnitName,BookPrice,BookDescription")] Book book)
+        public async Task<IActionResult> EditBooks(int id, [Bind("Id,BookName,BookAuthor,BookEdition,BookIsbn,UniversityLocation,CourseName,UnitName,BookPrice,BookDescription")] Book book)
         {
             if (id != book.Id)
             {
@@ -121,7 +121,7 @@ namespace BOOKLOUD.Controllers.User
             }
             return View(book);
         }
-        // GET: Books/Delete/5
+        // GET: Books Remove
         public async Task<IActionResult> Remove(int? id)
         {
             if (id == null)
@@ -139,7 +139,7 @@ namespace BOOKLOUD.Controllers.User
             return View(book);
         }
 
-        // POST: Books/Delete/5
+        // POST: Books Remove
         [HttpPost, ActionName("Remove")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

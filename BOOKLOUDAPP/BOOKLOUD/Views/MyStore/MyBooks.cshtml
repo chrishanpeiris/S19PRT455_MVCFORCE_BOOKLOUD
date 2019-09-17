@@ -26,9 +26,9 @@
                 <td> @Html.DisplayTextFor(modelItem => item.BookAuthor)</td>
                 <td> @Html.DisplayTextFor(modelItem => item.BookPrice)</td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("EditBook", "EditBooks", new { id = item.Id }) |
                     <a asp-action="ViewBooks" asp-route-id="@item.Id">View</a> |
-                    @Html.ActionLink("Remove", "Remove", new { id = item.Id })                
+                    @Html.ActionLink("RemoveBook", "Remove", new { id = item.Id })                
                 </td>
             </tr>
             }
