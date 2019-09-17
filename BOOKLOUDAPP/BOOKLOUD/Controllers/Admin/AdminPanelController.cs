@@ -40,14 +40,14 @@ namespace BOOKLOUD.Controllers.Admin
                 return NotFound();
             }
 
-            /*var user = await _db.Users
+            var user = await _db.Users
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (user == null)
             {
                 return NotFound();
-            }*/
+            }
 
-            return View();
+            return View(user);
         }
 
         public IActionResult UnitManagement()
