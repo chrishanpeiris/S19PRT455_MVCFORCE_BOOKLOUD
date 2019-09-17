@@ -10,17 +10,17 @@
 
     <table class="table table-striped">
         <thead>
-            <tr>
-                <th>User Name</th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th>User Type</th>
-                <th>Controls</th>
-            </tr>
+        <tr>
+            <th>User Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>User Type</th>
+            <th>Controls</th>
+        </tr>
         </thead>
         <tbody>
-            @foreach (var item in Model)
-            {
+        @foreach (var item in Model)
+        {
             <tr>
                 <td> @Html.DisplayTextFor(modelItem => item.UserName)</td>
                 <td> @Html.DisplayTextFor(modelItem => item.Email)</td>
@@ -34,11 +34,32 @@
                 </td>
                 <td>
                     <a asp-action="UserInfo" asp-route-id="@item.Id">View</a> |
-                    <a asp-route-id="@item.Id">Suspend</a>
+                    <a data-toggle="modal" data-target="#suspendModal" href="#">Suspend</a>
                 </td>
             </tr>
-            }
+
+            <div class="modal" id="suspendModal">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Suspend User</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Are you sure want to suspend user : @Html.DisplayTextFor(modelItem => item.UserName)</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">Yes</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
         </tbody>
     </table>
 
 </div>
+
