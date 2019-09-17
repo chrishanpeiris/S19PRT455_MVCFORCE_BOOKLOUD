@@ -117,6 +117,34 @@ namespace BOOKLOUD.Controllers.User
             }
             return View(book);
         }
+        // GET: Books/Delete/5
+        public async Task<IActionResult> Remove(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var book = await _db.Book
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (book == null)
+            {
+                return NotFound();
+            }
+
+            return View(book);
+        }
+
+        // POST: Books/Delete/5
+        [HttpPost, ActionName("Remove")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var book = await _db.Book.FindAsync(id);
+            _db.Book.Remove(book);
+            await _db.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
         private bool BookExists(int id)
         {
             return _db.Book.Any(e => e.Id == id);

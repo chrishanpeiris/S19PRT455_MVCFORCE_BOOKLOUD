@@ -25,11 +25,10 @@
                 <td> @Html.DisplayTextFor(modelItem => item.BookName)</td>
                 <td> @Html.DisplayTextFor(modelItem => item.BookAuthor)</td>
                 <td> @Html.DisplayTextFor(modelItem => item.BookPrice)</td>
-                <td> 
+                <td>
                     @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                    <a asp-action="ViewBooks">View</a>
-                    <a class="removeLink" asp-action="DeleteBooks">Remove</a> | 
-                    <a asp-action="UpdateBooks">Update</a>
+                    <a asp-action="ViewBooks">View</a> |
+                    @Html.ActionLink("Remove", "Remove", new { id = item.Id })                
                 </td>
             </tr>
             }
