@@ -58,7 +58,7 @@
                     @Html.DisplayNameFor(model => model.BookImage)
                 </dt>
                 <dd class="col-sm-10">
-                    @Html.DisplayFor(model => model.BookImage)
+                    <img width="240" height="320" src="~/img/book_img/@Html.DisplayFor(model => model.BookImage)">
                 </dd>
                 <dt class="col-sm-2">
                     @Html.DisplayNameFor(model => model.BookPrice)
