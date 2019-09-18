@@ -1,0 +1,23 @@
+hour 1:	 Group meeting - decide next sprint tasks (on class)
+hour 2:	 continuing Group meeting - divide next sprint tasks (on class)
+hour 3:	 continuing Group meeting - divide next sprint tasks (on class)
+hour 4:	 researching how to upload images 
+hour 5:	 researching how to upload images + create a sample project and try the researched process
+hour 6:	 implement upload images to books + work on Assignment 2
+hour 7:	 implement upload images to books
+hour 8:	 research on how to add thumbnail to autocomplete search results
+hour 9:	 continuing research on how to add thumbnail to autocomplete search results
+hour 10: continuing research on how to add thumbnail to autocomplete search results + try implementing in another project
+hour 11: implement showing image to seach autocomplete
+hour 12: continuing implement showing image to seach autocomplete
+hour 13: refactoring - extract database table models into a separate classes
+hour 14: continuing refactoring - extract database table models into a separate classes
+hour 15: continuing refactoring - extract database table models into a separate classes
+hour 16: fix search book issues + work on Assignment 2
+hour 17: research on how to implement a relationship with multiple tables
+hour 18: implement table relationships among University, Course, Unit
+hour 19: populate select options from database and view Unit options based on users choice of (University, Course)
+hour 20: continuing populate select options from database and view Unit options based on users choice of (University, Course)
+hour 21: group meeting - before class (finalising assignment 2 group task)
+hour 22: continuing group meeting - before class (finalising assignment 2 group task)
+hour 23: continuing group meeting - before class (fixing and discussing issues)
