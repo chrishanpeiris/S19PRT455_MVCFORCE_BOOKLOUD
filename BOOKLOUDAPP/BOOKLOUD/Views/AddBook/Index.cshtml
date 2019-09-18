@@ -38,10 +38,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="UnitName">Unit</label>
-                <select asp-for="UnitName" class="form-control">
-                    <option>PRT455 - Software Engineering Practice</option>
-                    <option>PRT820 - Master Thesis</option>
-                    <option>DLF544 - Web Technologies</option>
+                <select asp-for="UnitName" class="form-control" asp-items="@(new SelectList(string.Empty, "Id", "CourseName"))">
                 </select>
             </div>
             <div class="form-group">

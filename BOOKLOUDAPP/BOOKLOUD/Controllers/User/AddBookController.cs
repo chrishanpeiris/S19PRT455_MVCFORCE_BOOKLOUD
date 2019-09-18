@@ -52,6 +52,15 @@ namespace BOOKLOUD.Controllers.User
             return Json(new SelectList(list, "Id", "CourseName"));
         }
 
+
+        public JsonResult getunitbyid(int id)
+        {
+            List<UnitDetailsModel> list = new List<UnitDetailsModel>();
+            list = _db.Unit.Where(a => a.Course.Id == id).ToList();
+            list.Insert(0, new UnitDetailsModel() { Id = 0, UnitName = "Please Select Course" });
+            return Json(new SelectList(list, "Id", "UnitName"));
+        }
+
         [HttpPost] //post method
         public async Task<IActionResult> Create(Book book)
         {
