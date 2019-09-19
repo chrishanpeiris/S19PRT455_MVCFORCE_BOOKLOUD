@@ -8,6 +8,11 @@ namespace BOOKLOUD.Models
     public class UnitDetailsModel
     {
         public int Id { get; set; }
+
+        public virtual ICollection<UnitDetailsModel> University { get; set; }
+
+        public string UnitCode { get; set; }
+
         public string UnitName { get; set; }
 
         public virtual CourseDetailsModel Course { get; set; }

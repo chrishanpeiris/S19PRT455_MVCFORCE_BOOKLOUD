@@ -11,7 +11,7 @@
             <a asp-controller="AdminPanel" asp-action="AddUnit" class="btn btn-primary">Create New Unit</a>
         </p>
         <table class="table">
-            <thead>
+            <thead class="thead-dark">
                 <tr>
                     <th>Unit Name</th>
                     <th>Controls</th>
@@ -23,6 +23,7 @@
                     <tr>
                         <td>
                             @Html.DisplayFor(modelItem => item.UnitName)
+                            
                         </td>
                         <td>
                             <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
