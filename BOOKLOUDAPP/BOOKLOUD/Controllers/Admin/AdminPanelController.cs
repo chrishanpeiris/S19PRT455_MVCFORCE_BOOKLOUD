@@ -50,9 +50,9 @@ namespace BOOKLOUD.Controllers.Admin
             return View(user);
         }
 
-        public IActionResult UnitManagement()
+        public async Task<IActionResult> UnitManagement()
         {
-            return View();
+            return View(await _db.Unit.ToListAsync());
         }
 
         public IActionResult Reports()
