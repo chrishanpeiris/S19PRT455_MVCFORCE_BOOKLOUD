@@ -59,5 +59,10 @@ namespace BOOKLOUD.Controllers.Admin
         {
             return View();
         }
+
+        public IActionResult AddUnit()
+        {
+            return View();
+        }
     }
 }
