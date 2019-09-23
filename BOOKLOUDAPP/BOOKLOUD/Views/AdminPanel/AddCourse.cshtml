@@ -1,0 +1,43 @@
+﻿@model BOOKLOUD.Models.CourseDetailsModel
+
+@{
+    ViewData["Title"] = "AddCourse";
+    Layout = "_Layout";
+}
+
+<div class="container p-3">
+    <h1>Add Course</h1>
+
+    <h4>Enter Course Details</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="AddCourse">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="CourseName" class="control-label">Course Name</label>
+                    <input asp-for="CourseName" class="form-control" />
+                    <span asp-validation-for="CourseName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="University">University</label>
+                    <select asp-for="University.Id" class="form-control" name="UniversityId" asp-items="@(new SelectList(ViewBag.universities, "Id", "UniversityName"))">
+                        <option>- Select University -</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
