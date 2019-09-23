@@ -1,4 +1,4 @@
-﻿namespace BOOKLOUD.Models
+﻿namespace BOOKLOUD.BLL.Models
 {
     public class Book
     {
