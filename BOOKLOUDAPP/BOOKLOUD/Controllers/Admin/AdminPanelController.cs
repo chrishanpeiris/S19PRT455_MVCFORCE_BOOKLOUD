@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BOOKLOUD.Data;
+using BOOKLOUD.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -79,5 +80,33 @@ namespace BOOKLOUD.Controllers.Admin
         {
             throw new NotImplementedException();
         }
+
+        //actions for university management tasks
+        public async Task<IActionResult> UniversityManagement()
+        {
+            return View(await _db.University.ToListAsync());
+        }
+
+        public IActionResult AddUniveristy()
+        {
+            return View();
+        }
+        [HttpPost] //post method
+        public async Task<IActionResult> AddUniveristy(UniversityDetailsModel university)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Add(university); //add data to University table
+                await _db.SaveChangesAsync(); //wait for database response
+                return RedirectToAction(nameof(UniversityManagement)); // redirect to index
+            }
+
+            return View(university);
+        }
+
+
+        //actions for course management tasks
+
+
     }
 }
