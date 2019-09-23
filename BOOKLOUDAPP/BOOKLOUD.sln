@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29209.62
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BOOKLOUD", "BOOKLOUD\BOOKLOUD.csproj", "{7B7E1BFB-C9BC-4944-B95D-F833426C8AB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BOOKLOUD", "BOOKLOUD\BOOKLOUD.csproj", "{7B7E1BFB-C9BC-4944-B95D-F833426C8AB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DLL\DAL.csproj", "{FD01FA0C-B6A9-4E4D-BB43-A4CE19C725F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{64293A7A-93BF-4F27-8D26-EFEAB99F7122}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{7B7E1BFB-C9BC-4944-B95D-F833426C8AB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B7E1BFB-C9BC-4944-B95D-F833426C8AB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B7E1BFB-C9BC-4944-B95D-F833426C8AB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD01FA0C-B6A9-4E4D-BB43-A4CE19C725F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD01FA0C-B6A9-4E4D-BB43-A4CE19C725F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD01FA0C-B6A9-4E4D-BB43-A4CE19C725F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD01FA0C-B6A9-4E4D-BB43-A4CE19C725F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64293A7A-93BF-4F27-8D26-EFEAB99F7122}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64293A7A-93BF-4F27-8D26-EFEAB99F7122}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64293A7A-93BF-4F27-8D26-EFEAB99F7122}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64293A7A-93BF-4F27-8D26-EFEAB99F7122}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
