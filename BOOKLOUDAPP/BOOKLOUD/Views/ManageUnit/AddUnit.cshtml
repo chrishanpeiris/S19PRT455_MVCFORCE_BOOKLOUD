@@ -1,42 +1,38 @@
 ﻿@model BOOKLOUD.Models.UnitDetailsModel
 
 @{
-    Layout = "_Layout";
+    ViewData["Title"] = "View";
 }
 
-<!DOCTYPE html>
+<h1>View</h1>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Add Unit</title>
-</head>
-<body>
-
-    <div class="container pt-3">
-        <h2>Add Unit</h2>
-        <section class="col-md-4 p-0">
-
-            <form asp-action="AddUnit">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <div class="form-group">
-                    <label asp-for="UnitName" class="control-label"></label>
-                    <input asp-for="UnitName" class="form-control"/>
-                    <span asp-validation-for="UnitName" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Create" class="btn btn-primary"/>
-                </div>
-                <div>
-                    <a asp-action="UnitManagement">Back to List</a>
-                </div>
-            </form>
-        </section>
+<h4>UnitDetailsModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="View">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="UnitCode" class="control-label"></label>
+                <input asp-for="UnitCode" class="form-control" />
+                <span asp-validation-for="UnitCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UnitName" class="control-label"></label>
+                <input asp-for="UnitName" class="form-control" />
+                <span asp-validation-for="UnitName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
     </div>
+</div>
 
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
-</body> 
-</html>

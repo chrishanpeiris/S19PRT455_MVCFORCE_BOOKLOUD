@@ -11,7 +11,7 @@
 
         <div class="row">
             <div class="col-md-4">
-                <form asp-action="View">
+                <form a asp-controller="MyStore" asp-action="EditBooks" enctype="multipart/form-data" >
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <input type="hidden" asp-for="Id" />
                     <div class="form-group">
@@ -51,7 +51,8 @@
                     </div>
                     <div class="form-group">
                         <label asp-for="BookImage" class="control-label"></label>
-                        <input asp-for="BookImage" type="file" name="BookImage" class="form-control-file">                                         
+                        <input asp-for="BookImage" type="file" name="BookImage" class="form-control-file" />
+                        <span asp-validation-for="BookImage" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="BookPrice" class="control-label"></label>

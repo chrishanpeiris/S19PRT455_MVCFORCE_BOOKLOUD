@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BOOKLOUD.Data;
+using BOOKLOUD.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -28,7 +29,21 @@ namespace BOOKLOUD.Controllers.Admin
 
         public IActionResult AddUnit()
         {
+            ViewBag.Units = _db.Unit.ToList();
             return View();
+        }
+        [HttpPost] //post method
+        public async Task<IActionResult> AddUnit([Bind("Id, UnitName, UnitCode, UniversityId")] UnitDetailsModel Unit)
+        {
+            var universityId = Request.Form["UniversityId"];
+            if (ModelState.IsValid)
+            {
+                _db.Add(Unit); //add data to Unit table
+                await _db.SaveChangesAsync(); //wait for database response
+                return RedirectToAction(nameof(UnitManagement)); // redirect to index
+            }
+
+            return View(Unit);
         }
     }
 }
