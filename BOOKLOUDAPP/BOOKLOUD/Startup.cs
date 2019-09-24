@@ -43,7 +43,15 @@ namespace BOOKLOUD
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddIdentity<ApplicationUser, IdentityRole>()
+            services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+            {
+                options.Password.RequireDigit = true;//need number (0-9).
+                options.Password.RequiredLength = 6;//Lengt
+                options.Password.RequireNonAlphanumeric = true;//Need symbol
+                options.Password.RequireUppercase = true;//Need Uppercase
+                options.Password.RequireLowercase = true;//Need Lowercase
+                options.Password.RequiredUniqueChars = 1;
+            })
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();

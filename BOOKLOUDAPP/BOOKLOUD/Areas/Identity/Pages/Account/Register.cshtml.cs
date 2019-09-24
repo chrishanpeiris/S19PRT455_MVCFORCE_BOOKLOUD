@@ -57,7 +57,7 @@ namespace BOOKLOUD.Areas.Identity.Pages.Account
             public string PhoneNumber { get; set; }
 
             [Required]
-            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and check the password requirements above.", MinimumLength = 6)]
             [DataType(DataType.Password)]
             [Display(Name = "Password")]
             public string Password { get; set; }
@@ -79,12 +79,14 @@ namespace BOOKLOUD.Areas.Identity.Pages.Account
             returnUrl = returnUrl ?? Url.Content("~/");
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = Input.Email, Email = Input.Email, FirstName = Input.FirstName, LastName = Input.LastName, PhoneNumber = Input.PhoneNumber};
+                var user = new ApplicationUser { UserName = Input.Email, Email = Input.Email, FirstName = Input.FirstName, LastName = Input.LastName, PhoneNumber = Input.PhoneNumber, PasswordHash = Input.Password };
                 var result = await _userManager.CreateAsync(user, Input.Password);
-                await _userManager.AddToRoleAsync(user, "User");
                 
+                
+
                 if (result.Succeeded)
                 {
+                    await _userManager.AddToRoleAsync(user, "User");
                     _logger.LogInformation("User created a new account with password.");
 
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
