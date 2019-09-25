@@ -45,5 +45,10 @@ namespace BOOKLOUD.Controllers.Admin
 
             return View(Unit);
         }
+
+        public async Task<IActionResult> UnitInfo()
+        {
+            return View(await _db.Unit.ToListAsync());
+        }
     }
 }

@@ -5,35 +5,35 @@
     Layout = "_Layout";
 }
 
-<div class="container p-3">
-    <h2>Manage Courses</h2>
+    <div class="container p-3">
+        <h2>Manage Courses</h2>
 
-    <a asp-controller="ManageCourse" asp-action="AddCourse" class="btn btn-primary mb-3">Create New Course</a>
+        <a asp-controller="ManageCourse" asp-action="AddCourse" class="btn btn-primary mb-3">Create New Course</a>
 
-    <table class="table">
-        <thead class="thead-dark">
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.CourseName)
-                </th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
+        <table class="table">
+            <thead class="thead-dark">
                 <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.CourseName)
-                    </td>
-                    <td>
-                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                    </td>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CourseName)
+                    </th>
+                    <th></th>
                 </tr>
-            }
-        </tbody>
-    </table>
-
-</div>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CourseName)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <a class="nav-link" asp-controller="AdminPanel" asp-action="Index"><i class="far fa-arrow-alt-circle-left"></i> Back To Admin Panel</a>
+    </div>
