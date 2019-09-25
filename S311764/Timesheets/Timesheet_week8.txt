@@ -1,0 +1,23 @@
+hour 1:	 Group meeting - decide next sprint tasks (on class)
+hour 2:	 continuing Group meeting - divide next sprint tasks (on class)
+hour 3:	 continuing Group meeting - divide next sprint tasks (on class)
+hour 4:	 implement add courses (some errors when adding foreign key) Week8_BK_T38_Add_Courses
+hour 5:	 continuing implement add courses (some errors when adding foreign key) Week8_BK_T38_Add_Courses
+hour 6:	 work on Week8_BK_T39_View_Courses
+hour 7:	 implement add univeristy Week8_BK_T35_Add_University
+hour 8:	 continue add univeristy Week8_BK_T35_Add_University
+hour 9:	 implement view university list Week8_BK_T36_View_University_List
+hour 10: refactoring admin panel content Week8_BK_T50_Refactoring_AdminPanel_Content
+hour 11: continuing refactoring admin panel content Week8_BK_T50_Refactoring_AdminPanel_Content
+hour 12: continuing refactoring admin panel content Week8_BK_T50_Refactoring_AdminPanel_Content
+hour 13: research on 3Tier architecture Week8_BK_T40_Three_Tier_Architecture_Implementation
+hour 14: continuing research on 3Tier architecture Week8_BK_T40_Three_Tier_Architecture_Implementation
+hour 15: continuing research on 3Tier architecture Week8_BK_T40_Three_Tier_Architecture_Implementation
+hour 16: start implementing 3Tier architecture to the project by creating sub projects Week8_BK_T40_Three_Tier_Architecture_Implementation
+hour 17: continuing implementing 3Tier architecture to the project by creating sub projects Week8_BK_T40_Three_Tier_Architecture_Implementation
+hour 18: continuing implementing 3Tier architecture to the project by creating sub projects Week8_BK_T40_Three_Tier_Architecture_Implementation
+hour 19: strat implementing 3Tier as folders in a different branch Week8_BK_T40_Three_Tier_Architecture_Implementation
+hour 20: continuing implementing 3Tier as folders in a different branch Week8_BK_T40_Three_Tier_Architecture_Implementation
+hour 21: group meeting - before class (fix some database issues)
+hour 22: continuing group meeting - before class (fixing some validation issue)
+hour 23: continuing group meeting - before class (discuss about deliverables)
