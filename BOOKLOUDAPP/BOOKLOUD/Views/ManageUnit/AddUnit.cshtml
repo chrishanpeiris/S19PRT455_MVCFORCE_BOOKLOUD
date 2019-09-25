@@ -1,38 +1,37 @@
 ﻿@model BOOKLOUD.Models.UnitDetailsModel
 
 @{
-    ViewData["Title"] = "View";
+    ViewData["Title"] = "Add Units";
 }
+    <div class="container p-3">
+        <h1>Add Units</h1>
+           <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="View">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="UnitCode" class="control-label"></label>
+                        <input asp-for="UnitCode" class="form-control" />
+                        <span asp-validation-for="UnitCode" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="UnitName" class="control-label"></label>
+                        <input asp-for="UnitName" class="form-control" />
+                        <span asp-validation-for="UnitName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
 
-<h1>View</h1>
-
-<h4>UnitDetailsModel</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="View">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="UnitCode" class="control-label"></label>
-                <input asp-for="UnitCode" class="form-control" />
-                <span asp-validation-for="UnitCode" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="UnitName" class="control-label"></label>
-                <input asp-for="UnitName" class="form-control" />
-                <span asp-validation-for="UnitName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        <div>
+            <a asp-action="UnitManagement">Back to List</a>
+        </div>
     </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }
