@@ -14,4 +14,16 @@ namespace BOOKLOUD.Models
 
         public virtual ICollection<UnitDetailsModel> Unit { get; set; }
     }
+
+
+    public class CourseDetailsViewModel
+    {
+        public int Id { get; set; }
+        public string CourseName { get; set; }
+
+        public int UniversityId { get; set; }
+
+    }
+
+
 }

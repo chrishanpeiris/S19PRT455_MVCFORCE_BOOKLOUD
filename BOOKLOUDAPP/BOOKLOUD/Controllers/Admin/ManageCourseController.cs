@@ -35,23 +35,19 @@ namespace BOOKLOUD.Controllers.Admin
         }
 
         [HttpPost] //post method
-        public async Task<IActionResult> AddCourse([Bind("Id, CourseName, UniversityId")]CourseDetailsModel course)
+        public async Task<IActionResult> AddCourse([Bind("Id, CourseName, UniversityId")]CourseDetailsViewModel course)
         {
-            var universityId = Request.Form["UniversityId"];
             if (ModelState.IsValid)
             {
-                /*
+                
                 var newCourse = new CourseDetailsModel()
                 {
                     Id = course.Id,
                     CourseName = course.CourseName,
-                    University = universityId
-                }; */
-                // course.University = HttpContext.Request.Form["UserName"].ToString();
-                //HttpContext.Items["UniversityList"] = HttpContext.Request.Form["UniversityList"];
-                //StringValues universityId = HttpContext.Request.Form["UniversityList"];
-                //course.University = universityId;
-                _db.Add(course); //add data to University table
+                    University = _db.University.Find(course.UniversityId)
+                };
+
+                _db.Add(newCourse); //add data to University table
                 await _db.SaveChangesAsync(); //wait for database response
                 return RedirectToAction(nameof(CourseManagement)); // redirect to index
             }
