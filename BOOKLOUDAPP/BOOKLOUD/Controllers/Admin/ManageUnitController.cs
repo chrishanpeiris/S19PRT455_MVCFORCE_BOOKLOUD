@@ -46,9 +46,23 @@ namespace BOOKLOUD.Controllers.Admin
             return View(Unit);
         }
 
-        public async Task<IActionResult> UnitInfo()
+        public async Task<IActionResult> UnitInfo(int id)
         {
-            return View(await _db.Unit.ToListAsync());
+            {
+                if (id == null)
+                {
+                    return NotFound();
+                }
+
+                var unit = await _db.Unit
+                    .FirstOrDefaultAsync(m => m.Id == id);
+                if (unit == null)
+                {
+                    return NotFound();
+                }
+
+                return View(unit);
+            }
         }
     }
 }
