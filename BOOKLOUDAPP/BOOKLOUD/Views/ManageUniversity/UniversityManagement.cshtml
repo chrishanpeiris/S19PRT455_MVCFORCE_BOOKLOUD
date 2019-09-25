@@ -6,12 +6,12 @@
 }
 
 <div class="container p-3">
-<h2>University Management</h2>
+<h2>Manage Universities</h2>
 
     <a asp-controller="ManageUniversity" asp-action="AddUniveristy" class="btn btn-primary mb-3">Create New University</a>
 
 <table class="table">
-    <thead>
+    <thead class="thead-dark">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.UniversityName)
