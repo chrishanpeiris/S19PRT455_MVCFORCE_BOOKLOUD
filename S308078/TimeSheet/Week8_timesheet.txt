@@ -1,23 +1,23 @@
-hour 1:  Group discussion - Design Tasks
-hour 2:  Group discussion - Design Tasks
-hour 3:  Group discussion - Design Tasks
-hour 4:  Group discussion - assign Task
-hour 5:  Group discussion - assign Task
-hour 6:  BK_T32_Remove_Search_In_ViewBook
-hour 7:  Work on Research on how to do BK_T41_Edit_Books
-hour 8:  Work on BK_T41_Edit_Books 
-hour 9:  Work on BK_T41_Edit_Books
-hour 10: Work on BK_T41_Edit_Books
-hour 11: Work on Role BK_T42_Remove_Books
-hour 12: Work on Role BK_T42_Remove_Books
-hour 13: Work on Role BK_T42_Remove_Books
-hour 14: Work on BK_T28_View_Book_Details
+hour 1:  Group discussion - Design Tasks & Week8_BK_T48_Edit_Image_Books
+hour 2:  Group discussion - Design Tasks & Week8_BK_T48_Edit_Image_Books
+hour 3:  Group discussion - Design Tasks & Week8_BK_T48_Edit_Image_Books
+hour 4:  Work on Week8_BK_T48_Edit_Image_Books
+hour 5:  Work Week8_Three tier architecture_Practice
+hour 6:  Work on Week8_BK_T48_Edit_Image_Books
+hour 7:  Research on how to fix Week8_BK_T29_RegisterUser_Validation_Bug
+hour 8:  Work on BK_T29_RegisterUser_Validation_Bug 
+hour 9:  Work on BK_T29_RegisterUser_Validation_Bug - Failed
+hour 10: Research on how to fix Week8_BK_T29_RegisterUser_Validation_Bug
+hour 11: Work on BK_T29_RegisterUser_Validation_Bug - Done
+hour 12: Work on Week8_BK_T46_Add_Unit
+hour 13: Accidentally deleted unit table from database
+hour 14: Work on Restore unit table
 hour 15: Work on BK_T28_View_Book_Details
-hour 16: Work on Assignment 2
-hour 17: Work on Assignment 2
-hour 18: Work on Assignment 2
-hour 19: Work on Optimize the view of pages
+hour 16: Tried to manually restore unit table - error occoured
+hour 17: Decided to remove whole database and restore from team member's backup - Learned backup is very important
+hour 18: Work on Week8_BK_T46_Add_Unit - Done
+hour 19: Work Week8_Three tier architecture_Practice
 hour 20: Work on Optimize:Small changes not included in task
-hour 21: Group discussion before class - BK_T28_View_Book_Details - Fix bug of Img no show up
-hour 22: Group discussion before class
+hour 21: Group discussion before class - Work on Week8_BK_T48_Edit_Image_Books_Failed
+hour 22: Group discussion before class - discuss Three tier architecture_Practice
 hour 23: Group discussion before class

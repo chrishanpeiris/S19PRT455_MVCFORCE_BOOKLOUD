@@ -1,0 +1,23 @@
+hour 1:  Group discussion - Design Tasks
+hour 2:  Group discussion - Design Tasks
+hour 3:  Group discussion - Design Tasks
+hour 4:  Group discussion - assign Task
+hour 5:  Group discussion - assign Task
+hour 6:  BK_T32_Remove_Search_In_ViewBook
+hour 7:  Work on Research on how to do BK_T41_Edit_Books
+hour 8:  Work on BK_T41_Edit_Books 
+hour 9:  Work on BK_T41_Edit_Books
+hour 10: Work on BK_T41_Edit_Books
+hour 11: Work on Role BK_T42_Remove_Books
+hour 12: Work on Role BK_T42_Remove_Books
+hour 13: Work on Role BK_T42_Remove_Books
+hour 14: Work on BK_T28_View_Book_Details
+hour 15: Work on BK_T28_View_Book_Details
+hour 16: Work on Assignment 2
+hour 17: Work on Assignment 2
+hour 18: Work on Assignment 2
+hour 19: Work on Optimize the view of pages
+hour 20: Work on Optimize:Small changes not included in task
+hour 21: Group discussion before class - BK_T28_View_Book_Details - Fix bug of Img no show up
+hour 22: Group discussion before class
+hour 23: Group discussion before class
