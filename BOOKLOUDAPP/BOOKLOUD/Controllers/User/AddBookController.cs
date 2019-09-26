@@ -23,13 +23,15 @@ namespace BOOKLOUD.Controllers.User
         private readonly IHostingEnvironment _appEnvironment;
         private BookService _bookBusinessLogicService;
         private UniversityService _universityBusinessLogicService;
+        private CourseService _courseBusinessLogicService;
 
-        public AddBookController(ApplicationDbContext db, IHostingEnvironment appEnvironment, BookService bookBookBusinessLogicService, UniversityService universityBusinessLogicService)
+        public AddBookController(ApplicationDbContext db, IHostingEnvironment appEnvironment, BookService bookBusinessLogicService, UniversityService universityBusinessLogicService, CourseService courseBusinessLogicService)
         {
             _db = db;
             _appEnvironment = appEnvironment;
-            _bookBusinessLogicService = bookBookBusinessLogicService;
+            _bookBusinessLogicService = bookBusinessLogicService;
             _universityBusinessLogicService = universityBusinessLogicService;
+            _courseBusinessLogicService = courseBusinessLogicService;
         }
 
         public IActionResult Index()
@@ -38,24 +40,13 @@ namespace BOOKLOUD.Controllers.User
             return View();
         }
 
-        /*
-        [HttpPost] //post method
-        public async Task<IActionResult> Create([Bind("Id, BookName, BookAuthor, BookEdition, BookIsbn, University, CourseName, UnitName, BookImage, BookPrice, BookDescription")] BookDetailsViewModel bookDetailsViewModel)
-        {
-            if (ModelState.IsValid)
-            {
-                _db.Add(bookDetailsViewModel); //add data to BookDetailsViewModel table
-                await _db.SaveChangesAsync(); //wait for database response
-            }
 
-            return RedirectToRoute("Default", new {Controller = "MyStore", Action = "MyBooks"});
-        }*/
 
         public JsonResult getcoursebyid(int id)
         {
-            List<CourseDetailsViewModel> list =new List<CourseDetailsViewModel>();
-            list = _db.Course.Where(a => a.University.Id == id).ToList();
-            list.Insert(0, new CourseDetailsViewModel{Id=0, CourseName = "Please Select Course"});
+            List<CourseDetailsViewModel> list = new List<CourseDetailsViewModel>();
+            list = _courseBusinessLogicService.FetchCoursesByUniversityId(id);
+            list.Insert(0, new CourseDetailsViewModel { Id = 0, CourseName = "Please Select Course" });
             return Json(new SelectList(list, "Id", "CourseName"));
         }
 
@@ -134,8 +125,21 @@ namespace BOOKLOUD.Controllers.User
                 //_db.Add(bookDetailsViewModel); //add data to BookDetailsViewModel table
                 //await _db.SaveChangesAsync(); //wait for database response
             }
-                return RedirectToRoute("Default", new { Controller = "MyStore", Action = "MyBooks" });
+            return RedirectToRoute("Default", new { Controller = "MyStore", Action = "MyBooks" });
         }
+
+                    /*
+            [HttpPost] //post method
+            public async Task<IActionResult> Create([Bind("Id, BookName, BookAuthor, BookEdition, BookIsbn, University, CourseName, UnitName, BookImage, BookPrice, BookDescription")] BookDetailsViewModel bookDetailsViewModel)
+            {
+                if (ModelState.IsValid)
+                {
+                    _db.Add(bookDetailsViewModel); //add data to BookDetailsViewModel table
+                    await _db.SaveChangesAsync(); //wait for database response
+                }
+
+                return RedirectToRoute("Default", new {Controller = "MyStore", Action = "MyBooks"});
+            }*/
     }
 
 
