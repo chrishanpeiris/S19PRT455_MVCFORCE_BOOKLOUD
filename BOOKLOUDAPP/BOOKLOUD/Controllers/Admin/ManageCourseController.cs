@@ -40,7 +40,7 @@ namespace BOOKLOUD.Controllers.Admin
             if (ModelState.IsValid)
             {
                 
-                var newCourse = new CourseDetailsModel()
+                var newCourse = new CourseDetailsViewModel()
                 {
                     Id = course.Id,
                     CourseName = course.CourseName,

@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BOOKLOUD.Models
+namespace BOOKLOUD.BusinessLogicLayer.Models
 {
-    public class UnitDetailsModel
+    public class UnitDetailsBLLModel
     {
         public int Id { get; set; }
 
-        public virtual ICollection<UnitDetailsModel> University { get; set; }
+        public virtual ICollection<UnitDetailsBLLModel> University { get; set; }
 
         public string UnitCode { get; set; }
 
         public string UnitName { get; set; }
 
-        public virtual CourseDetailsModel Course { get; set; }
+        public virtual CourseDetailsBLLModel Course { get; set; }
     }
 }

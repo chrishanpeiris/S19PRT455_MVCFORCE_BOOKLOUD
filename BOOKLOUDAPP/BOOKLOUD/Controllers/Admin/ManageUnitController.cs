@@ -33,7 +33,7 @@ namespace BOOKLOUD.Controllers.Admin
             return View();
         }
         [HttpPost] //post method
-        public async Task<IActionResult> AddUnit([Bind("Id, UnitName, UnitCode, UniversityId")] UnitDetailsModel Unit)
+        public async Task<IActionResult> AddUnit([Bind("Id, UnitName, UnitCode, UniversityId")] UnitDetailsViewModel Unit)
         {
             var universityId = Request.Form["UniversityId"];
             if (ModelState.IsValid)

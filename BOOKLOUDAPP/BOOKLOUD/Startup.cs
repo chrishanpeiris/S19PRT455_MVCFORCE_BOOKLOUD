@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using BOOKLOUD.Data;
+using BOOKLOUD.DataAccessLayer.DataContext;
 using BOOKLOUD.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -43,6 +44,12 @@ namespace BOOKLOUD
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
+
+            //BOOKLOUD.DataAccessLayer context
+            services.AddDbContext<BookCloudDbContext>
+            (options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
+                sqlServerOptions => sqlServerOptions.MigrationsAssembly("BOOKLOUD.DataAccessLayer")));
+
             services.AddIdentity<ApplicationUser, IdentityRole>(options =>
             {
                 options.Password.RequireDigit = true;//need number (0-9).

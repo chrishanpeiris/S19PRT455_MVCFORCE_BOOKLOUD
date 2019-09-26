@@ -74,7 +74,7 @@ namespace BOOKLOUD.Data.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
-            modelBuilder.Entity("BOOKLOUD.Models.Book", b =>
+            modelBuilder.Entity("BOOKLOUD.Models.BookDetailsViewModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -98,14 +98,14 @@ namespace BOOKLOUD.Data.Migrations
 
                     b.Property<string>("UnitName");
 
-                    b.Property<string>("UniversityLocation");
+                    b.Property<string>("University");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Book");
+                    b.ToTable("BookDetailsViewModel");
                 });
 
-            modelBuilder.Entity("BOOKLOUD.Models.CourseDetailsModel", b =>
+            modelBuilder.Entity("BOOKLOUD.Models.CourseDetailsViewModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -122,7 +122,7 @@ namespace BOOKLOUD.Data.Migrations
                     b.ToTable("Course");
                 });
 
-            modelBuilder.Entity("BOOKLOUD.Models.UnitDetailsModel", b =>
+            modelBuilder.Entity("BOOKLOUD.Models.UnitDetailsViewModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -145,7 +145,7 @@ namespace BOOKLOUD.Data.Migrations
                     b.ToTable("Unit");
                 });
 
-            modelBuilder.Entity("BOOKLOUD.Models.UniversityDetailsModel", b =>
+            modelBuilder.Entity("BOOKLOUD.Models.UniversityDetailsViewModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -268,20 +268,20 @@ namespace BOOKLOUD.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("BOOKLOUD.Models.CourseDetailsModel", b =>
+            modelBuilder.Entity("BOOKLOUD.Models.CourseDetailsViewModel", b =>
                 {
-                    b.HasOne("BOOKLOUD.Models.UniversityDetailsModel", "University")
+                    b.HasOne("BOOKLOUD.Models.UniversityDetailsViewModel", "University")
                         .WithMany("Course")
                         .HasForeignKey("UniversityId");
                 });
 
-            modelBuilder.Entity("BOOKLOUD.Models.UnitDetailsModel", b =>
+            modelBuilder.Entity("BOOKLOUD.Models.UnitDetailsViewModel", b =>
                 {
-                    b.HasOne("BOOKLOUD.Models.CourseDetailsModel", "Course")
+                    b.HasOne("BOOKLOUD.Models.CourseDetailsViewModel", "Course")
                         .WithMany("Unit")
                         .HasForeignKey("CourseId");
 
-                    b.HasOne("BOOKLOUD.Models.UnitDetailsModel")
+                    b.HasOne("BOOKLOUD.Models.UnitDetailsViewModel")
                         .WithMany("University")
                         .HasForeignKey("UnitDetailsModelId");
                 });

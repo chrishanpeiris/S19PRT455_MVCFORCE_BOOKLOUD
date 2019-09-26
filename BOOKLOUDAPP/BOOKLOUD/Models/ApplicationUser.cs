@@ -10,5 +10,6 @@ namespace BOOKLOUD.Models
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public bool SuspendStatus { get; set; }
     }
 }

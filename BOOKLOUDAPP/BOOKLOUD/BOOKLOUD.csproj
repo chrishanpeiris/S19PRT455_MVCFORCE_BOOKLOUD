@@ -26,4 +26,9 @@
     <Folder Include="Views\AdminPanel\ManageUser\" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <ProjectReference Include="..\BOOKLOUD.BusinessLogicLayer\BOOKLOUD.BusinessLogicLayer.csproj" />
+  </ItemGroup>
+
 </Project>

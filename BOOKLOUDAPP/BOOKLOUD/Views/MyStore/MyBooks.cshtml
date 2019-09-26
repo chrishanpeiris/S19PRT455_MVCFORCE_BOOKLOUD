@@ -1,18 +1,18 @@
-﻿@model IEnumerable<Book>
+﻿@model IEnumerable<BookDetailsViewModel>
 
 @{
-    ViewBag.Title = "My Book";
+    ViewBag.Title = "My BookDetailsViewModel";
     Layout = "_Layout";
 }
 <div class="container pt-3">
-    <h2>My Book</h2>
+    <h2>My BookDetailsDALModelDetailsViewModel</h2>
     <a class="nav-link" asp-controller="MyStore" asp-action="Index"><i class="far fa-arrow-alt-circle-left"></i> Back to My Store.</a>
  <table class="table table-striped">
         <thead>
             <tr>
-                <th scope="col">Book Id</th>
-                <th scope="col">Book Name</th>
-                <th scope="col">Book Author</th>
+                <th scope="col">BookDetailsDALModelDetailsViewModel Id</th>
+                <th scope="col">BookDetailsDALModelDetailsViewModel Name</th>
+                <th scope="col">BookDetailsDALModelDetailsViewModel Author</th>
                 <th scope="col">Price (AU)</th>
                 <th scope="col">View/Delete</th>
             </tr>

@@ -128,9 +128,9 @@ namespace BOOKLOUD.Controllers.User
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> EditBooks(int id, [Bind("Id,BookName,BookAuthor,BookEdition,BookIsbn,UniversityLocation,BookImage,CourseName,UnitName,BookPrice,BookDescription")] Book book)
+        public async Task<IActionResult> EditBooks(int id, [Bind("Id,BookName,BookAuthor,BookEdition,BookIsbn,University,BookImage,CourseName,UnitName,BookPrice,BookDescription")] BookDetailsViewModel bookDetailsViewModel)
         {
-            if (id != book.Id)
+            if (id != bookDetailsViewModel.Id)
             {
                 return NotFound();
             }
@@ -139,12 +139,12 @@ namespace BOOKLOUD.Controllers.User
             {
                 try
                 {
-                    _db.Update(book);
+                    _db.Update(bookDetailsViewModel);
                     await _db.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!BookExists(book.Id))
+                    if (!BookExists(bookDetailsViewModel.Id))
                     {
                         return NotFound();
                     }
@@ -155,7 +155,7 @@ namespace BOOKLOUD.Controllers.User
                 }
                 return RedirectToAction(nameof(MyBooks));
             }           
-            return View(book);
+            return View(bookDetailsViewModel);
         }
         // GET: Books Remove
         public async Task<IActionResult> Remove(int? id)

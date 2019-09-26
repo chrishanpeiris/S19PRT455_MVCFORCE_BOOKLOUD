@@ -1,4 +1,4 @@
-﻿@model Book
+﻿@model BookDetailsViewModel
 @{
     ViewData["Title"] = "Home";
 }
@@ -8,7 +8,7 @@
         <div class="container h-100">
             <div class="row h-100 justify-content-center align-items-center text-center">
                 <form class="mx-2 my-auto d-inline w-75" id="searchBar" asp-controller="SearchBook" asp-action="Index">
-                    <h1>Find a textbook</h1>
+                    <h1>Find a textbookDetailsViewModel</h1>
                     <div class="input-group">
                         <input asp-for="BookName" type="text" class="form-control searchInput" name="SearchString" placeholder="Search by title, author, unit code or ISBN">
                         <span class="input-group-append">
@@ -22,8 +22,8 @@
 
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <h1 class="display-4">Latest Books</h1>
-        <p class="lead">Find recently added textbooks in Bookloud</p>
+        <h1 class="display-4">Latest BookDetailsViewModels</h1>
+        <p class="lead">Find recently added textbookDetailsViewModels in BookDetailsViewModelloud</p>
     </div>
 </div>
 <div class="container">
@@ -31,9 +31,9 @@
         <div class="col-sm-3">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Book 1</h5>
-                    <p class="card-text"><p class="card-text"><p class="card-text">View the ID 1 book.</p>
-                    <p a asp-controller="MyStore" asp-action="ViewBooks" asp-route-id="1" class="btn btn-primary">View</p>
+                    <h5 class="card-title">BookDetailsViewModel 1</h5>
+                    <p class="card-text"><p class="card-text"><p class="card-text">View the ID 1 bookDetailsViewModel.</p>
+                    <p a asp-controller="MyStore" asp-action="ViewBookDetailsViewModels" asp-route-id="1" class="btn btn-primary">View</p>
 
                 </div>
             </div>
@@ -41,27 +41,27 @@
         <div class="col-sm-3">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Book 2</h5>
-                    <p class="card-text">View the ID 2 book.</p>
-                    <p a asp-controller="MyStore" asp-action="ViewBooks" asp-route-id="1" class="btn btn-primary">View</p>
+                    <h5 class="card-title">BookDetailsViewModel 2</h5>
+                    <p class="card-text">View the ID 2 bookDetailsViewModel.</p>
+                    <p a asp-controller="MyStore" asp-action="ViewBookDetailsViewModels" asp-route-id="1" class="btn btn-primary">View</p>
                 </div>
             </div>
         </div>
         <div class="col-sm-3">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Book 3</h5>
-                    <p class="card-text">View the ID 3 book.</p>
-                    <p a asp-controller="MyStore" asp-action="ViewBooks" asp-route-id="1" class="btn btn-primary">View</p>
+                    <h5 class="card-title">BookDetailsViewModel 3</h5>
+                    <p class="card-text">View the ID 3 bookDetailsViewModel.</p>
+                    <p a asp-controller="MyStore" asp-action="ViewBookDetailsViewModels" asp-route-id="1" class="btn btn-primary">View</p>
                 </div>
             </div>
         </div>
         <div class="col-sm-3">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Book 4</h5>
-                    <p class="card-text">View the ID  book.</p>
-                    <p a asp-controller="MyStore" asp-action="ViewBooks" asp-route-id="1" class="btn btn-primary">View</p>
+                    <h5 class="card-title">BookDetailsViewModel 4</h5>
+                    <p class="card-text">View the ID  bookDetailsViewModel.</p>
+                    <p a asp-controller="MyStore" asp-action="ViewBookDetailsViewModels" asp-route-id="1" class="btn btn-primary">View</p>
                 </div>
             </div>
         </div>

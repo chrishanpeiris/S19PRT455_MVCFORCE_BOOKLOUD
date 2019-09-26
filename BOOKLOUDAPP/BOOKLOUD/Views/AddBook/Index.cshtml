@@ -1,17 +1,17 @@
-﻿@model Book
+﻿@model BookDetailsViewModel
 
 @{
     ViewBag.Title = "Add Books";
     Layout = "_Layout";
 }
 <div class="container pt-3">
-    <h2>Add Books</h2>
+    <h2>Add BookDetailsViewModels</h2>
 
     <section class="col-md-4 p-0">
         <form asp-controller="AddBook" asp-action="Create" enctype="multipart/form-data" method="post">
             <div class="form-group">
-                <label asp-for="BookName">Book Title</label>
-                <input asp-for="BookName" type="text" class="form-control"  placeholder="Enter book title" required>
+                <label asp-for="BookName">BookDetailsViewModel Title</label>
+                <input asp-for="BookName" type="text" class="form-control"  placeholder="Enter bookDetailsViewModel title" required>
             </div>
             <div class="form-group">
                 <label asp-for="BookAuthor">Author</label>
@@ -19,7 +19,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="BookEdition">Edition</label>
-                <input type="text" asp-for="BookEdition" class="form-control" placeholder="Enter book edition">
+                <input type="text" asp-for="BookEdition" class="form-control" placeholder="Enter bookDetailsViewModel edition">
             </div>
             <div class="form-group">
                 <label asp-for="BookIsbn">ISBN</label>
@@ -42,16 +42,16 @@
                 </select>
             </div>
             <div class="form-group">
-                <label asp-for="BookImage">Book Image</label>
-                <input asp-for="BookImage" type="file" name="BookImage" class="form-control-file">
+                <label asp-for="BookImage">BookDetailsViewModel Image</label>
+                <input asp-for="BookImage" type="file" name="BookDetailsViewModelImage" class="form-control-file">
             </div>
             <div class="form-group">
-                <label asp-for="BookPrice">Book Price</label>
-                <input asp-for="BookPrice" type="text" class="form-control" placeholder="Enter Book Price" required>
+                <label asp-for="BookPrice">BookDetailsViewModel Price</label>
+                <input asp-for="BookPrice" type="text" class="form-control" placeholder="Enter BookDetailsViewModel Price" required>
             </div>
             <div class="form-group">
-                <label asp-for="BookDescription">Book Description</label>
-                <textarea asp-for="BookDescription" class="form-control" placeholder="Enter book description"></textarea>
+                <label asp-for="BookDescription">BookDetailsViewModel Description</label>
+                <textarea asp-for="BookDescription" class="form-control" placeholder="Enter bookDetailsViewModel description"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

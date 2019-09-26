@@ -1,12 +1,12 @@
-﻿@model BOOKLOUD.Models.Book
+﻿@model BOOKLOUD.Models.BookDetailsViewModel
 
 @{
-    ViewBag.Title = "View Book";
+    ViewBag.Title = "View BookDetailsViewModel";
     Layout = "_Layout";
 
 }
 <div class="container pt-3">
-    <h2>View Book</h2>
+    <h2>View BookDetailsDALModelDetailsViewModel</h2>
 </div>
 <section class="container">
     <dl class="row">
@@ -35,10 +35,10 @@
             @Html.DisplayFor(model => model.BookIsbn)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.UniversityLocation)
+            @Html.DisplayNameFor(model => model.University)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.UniversityLocation)
+            @Html.DisplayFor(model => model.University)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.CourseName)
@@ -76,7 +76,7 @@
     </div>
     <br />
     <div>
-        <a asp-action="MyBooks"><i class="far fa-arrow-alt-circle-left"></i> Back to MyBooks</a>
+        <a asp-action="MyBooks"><i class="far fa-arrow-alt-circle-left"></i> Back to MyBookDetailsDALModelDetailsViewModels</a>
     </div>
 
 </section>
