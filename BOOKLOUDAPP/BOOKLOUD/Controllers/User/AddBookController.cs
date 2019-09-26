@@ -21,20 +21,23 @@ namespace BOOKLOUD.Controllers.User
     {
         private ApplicationDbContext _db;
         private readonly IHostingEnvironment _appEnvironment;
-        private BookService _businessLogicService;
+        private BookService _bookBusinessLogicService;
+        private UniversityService _universityBusinessLogicService;
 
-        public AddBookController(ApplicationDbContext db, IHostingEnvironment appEnvironment, BookService businessLogicService)
+        public AddBookController(ApplicationDbContext db, IHostingEnvironment appEnvironment, BookService bookBookBusinessLogicService, UniversityService universityBusinessLogicService)
         {
             _db = db;
             _appEnvironment = appEnvironment;
-            _businessLogicService = businessLogicService;
+            _bookBusinessLogicService = bookBookBusinessLogicService;
+            _universityBusinessLogicService = universityBusinessLogicService;
         }
 
         public IActionResult Index()
         {
-            ViewBag.universities = _db.University.ToList();
+            ViewBag.universities = _universityBusinessLogicService.FetchAllUniversities();
             return View();
         }
+
         /*
         [HttpPost] //post method
         public async Task<IActionResult> Create([Bind("Id, BookName, BookAuthor, BookEdition, BookIsbn, University, CourseName, UnitName, BookImage, BookPrice, BookDescription")] BookDetailsViewModel bookDetailsViewModel)
@@ -105,7 +108,7 @@ namespace BOOKLOUD.Controllers.User
                 BookBLLModel.UnitName = bookDetailsViewModel.UnitName;
                 BookBLLModel.BookPrice = bookDetailsViewModel.BookPrice;
 
-                _businessLogicService.Add(BookBLLModel);
+                _bookBusinessLogicService.Add(BookBLLModel);
 
 
                 //var files = HttpContext.Request.Form.Files;
