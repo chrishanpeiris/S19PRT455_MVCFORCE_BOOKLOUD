@@ -18,12 +18,4 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
   </ItemGroup>
 
-
-  <ItemGroup>
-    <Folder Include="Views\AdminPanel\ManageCourse\" />
-    <Folder Include="Views\AdminPanel\ManageUnit\" />
-    <Folder Include="Views\AdminPanel\ManageUniversity\" />
-    <Folder Include="Views\AdminPanel\ManageUser\" />
-  </ItemGroup>
-
 </Project>

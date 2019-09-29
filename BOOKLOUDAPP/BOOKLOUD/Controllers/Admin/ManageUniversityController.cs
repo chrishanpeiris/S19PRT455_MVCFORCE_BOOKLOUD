@@ -44,5 +44,24 @@ namespace BOOKLOUD.Controllers.Admin
 
             return View(university);
         }
+
+        public async Task<IActionResult> UniversityInfo(int id)
+        {
+            {
+                if (id == null)
+                {
+                    return NotFound();
+                }
+
+                var university = await _db.University
+                    .FirstOrDefaultAsync(m => m.Id == id);
+                if (university == null)
+                {
+                    return NotFound();
+                }
+
+                return View(university);
+            }
+        }
     }
 }
