@@ -63,5 +63,57 @@ namespace BOOKLOUD.Controllers.Admin
                 return View(university);
             }
         }
+
+        public async Task<IActionResult> EditUniversity(int? id)
+        {
+            if (id == null) //check if the id is null
+            {
+                return NotFound();
+            }
+
+            var university = await _db.University.FindAsync(id); // search the id in Book table
+            if (university == null)
+            {
+                return NotFound();
+            }
+
+            return View(university);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditUniversity(int id, [Bind("Id,UniversityName")] UniversityDetailsModel university)
+        {
+            if (id != university.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _db.Update(university); // update Book name
+                    await _db.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!UniversityExist(university.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(UniversityManagement)); // redirect to index
+            }
+            return View(university);
+        }
+
+        private bool UniversityExist(int id)
+        {
+            return _db.University.Any(e => e.Id == id);
+        }
     }
 }

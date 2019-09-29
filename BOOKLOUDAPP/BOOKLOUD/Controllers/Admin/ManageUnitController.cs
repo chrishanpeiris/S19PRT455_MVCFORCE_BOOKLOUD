@@ -32,6 +32,7 @@ namespace BOOKLOUD.Controllers.Admin
             ViewBag.Units = _db.Unit.ToList();
             return View();
         }
+
         [HttpPost] //post method
         public async Task<IActionResult> AddUnit([Bind("Id, UnitName, UnitCode, UniversityId")] UnitDetailsModel Unit)
         {
@@ -64,5 +65,6 @@ namespace BOOKLOUD.Controllers.Admin
                 return View(unit);
             }
         }
+
     }
 }
