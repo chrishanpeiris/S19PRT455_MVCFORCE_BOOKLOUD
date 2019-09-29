@@ -11,7 +11,7 @@
         <a asp-controller="ManageUniversity" asp-action="AddUniveristy" class="btn btn-primary mb-3">Create New University</a>
 
         <table class="table">
-            <thead class="thead-dark">
+            <thead>
                 <tr>
                     <th>
                         @Html.DisplayNameFor(model => model.UniversityName)
@@ -29,7 +29,7 @@
                         <td>
                             <a asp-action="EditUniversity" asp-route-id="@item.Id">Edit</a> |
                             <a asp-action="UniversityInfo" asp-route-id="@item.Id">Details</a> |
-                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            <a asp-action="DeleteUniversity" asp-route-id="@item.Id">Delete</a>
                         </td>
                     </tr>
                 }

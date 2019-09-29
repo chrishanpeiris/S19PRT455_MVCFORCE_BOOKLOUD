@@ -111,6 +111,34 @@ namespace BOOKLOUD.Controllers.Admin
             return View(university);
         }
 
+        public async Task<IActionResult> DeleteUniversity(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var university = await _db.University
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (university == null)
+            {
+                return NotFound();
+            }
+
+            return View(university);
+        }
+
+        [HttpPost, ActionName("DeleteUniversity")]
+
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var university = await _db.University.FindAsync(id);
+            _db.University.Remove(university); // delete method 
+            await _db.SaveChangesAsync(); // wait for the response from the backend
+            return RedirectToAction(nameof(UniversityManagement)); // redirect to index
+
+        }
+
         private bool UniversityExist(int id)
         {
             return _db.University.Any(e => e.Id == id);
