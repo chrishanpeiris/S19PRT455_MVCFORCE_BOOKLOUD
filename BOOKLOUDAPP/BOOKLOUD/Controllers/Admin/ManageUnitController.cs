@@ -101,7 +101,7 @@ namespace BOOKLOUD.Controllers.Admin
         }
 
         [HttpPost]
-        public async Task<IActionResult> EditUnit(int id, [Bind("Id, UnitCode, UnitName")] UnitDetailsModel unit)
+        public async Task<IActionResult> EditUnit(int id, [Bind("Id, UnitCode, UnitName, CourseId, UniversityId")] UnitDetailsModel unit)
         {
             if (id != unit.Id)
             {
@@ -129,6 +129,34 @@ namespace BOOKLOUD.Controllers.Admin
                 return RedirectToAction(nameof(UnitManagement)); // redirect to index
             }
             return View(unit);
+        }
+
+        public async Task<IActionResult> DeleteUnit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var unit = await _db.Unit 
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (unit == null)
+            {
+                return NotFound();
+            }
+
+            return View(unit);
+        }
+
+        [HttpPost, ActionName("DeleteUnit")]
+
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var unit = await _db.Unit.FindAsync(id);
+            _db.Unit.Remove(unit); // delete method 
+            await _db.SaveChangesAsync(); // wait for the response from the backend
+            return RedirectToAction(nameof(UnitManagement)); // redirect to index
+
         }
 
         private bool UnitExist(int id)
