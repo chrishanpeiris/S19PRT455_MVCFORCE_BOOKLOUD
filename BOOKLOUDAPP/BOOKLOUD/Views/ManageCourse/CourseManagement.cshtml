@@ -11,7 +11,7 @@
         <a asp-controller="ManageCourse" asp-action="AddCourse" class="btn btn-primary mb-3">Create New Course</a>
 
         <table class="table">
-            <thead class="thead-dark">
+            <thead>
                 <tr>
                     <th>
                         @Html.DisplayNameFor(model => model.CourseName)
@@ -27,9 +27,9 @@
                             @Html.DisplayFor(modelItem => item.CourseName)
                         </td>
                         <td>
-                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                            <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            <a asp-action="EditCourse" asp-route-id="@item.Id">Edit</a> |
+                            <a asp-action="CourseInfo" asp-route-id="@item.Id">Details</a> |
+                            <a asp-action="DeleteCourse" asp-route-id="@item.Id">Delete</a>
                         </td>
                     </tr>
                 }

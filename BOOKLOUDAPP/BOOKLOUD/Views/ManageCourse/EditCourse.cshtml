@@ -1,0 +1,35 @@
+﻿@model BOOKLOUD.Models.CourseDetailsModel
+
+@{
+    ViewBag.Title = "Edit Course";
+    Layout = "_Layout";
+}
+
+<div class="container p-3">
+<h2>Edit Course</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditCourse">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="CourseName" class="control-label"></label>
+                <input asp-for="CourseName" class="form-control" />
+                <span asp-validation-for="CourseName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="CourseManagement">Back to List</a>
+</div>
+    
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
