@@ -6,6 +6,7 @@ using BOOKLOUD.Data;
 using BOOKLOUD.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -29,22 +30,39 @@ namespace BOOKLOUD.Controllers.Admin
 
         public IActionResult AddUnit()
         {
-            ViewBag.Units = _db.Unit.ToList();
+            ViewBag.universities = _db.University.ToList();
             return View();
         }
 
         [HttpPost] //post method
-        public async Task<IActionResult> AddUnit([Bind("Id, UnitName, UnitCode, UniversityId")] UnitDetailsModel Unit)
+        public async Task<IActionResult> AddUnit([Bind("Id, UnitCode, UnitName, CourseId, UniversityId ")]UnitDetailsViewModel unit)
         {
-            var universityId = Request.Form["UniversityId"];
             if (ModelState.IsValid)
             {
-                _db.Add(Unit); //add data to Unit table
+
+                var newUnit = new UnitDetailsModel()
+                {
+                    Id = unit.Id,
+                    UnitName = unit.UnitName,
+                    UnitCode = unit.UnitCode,
+                    Course = _db.Course.Find(unit.UniversityId),
+                    University = _db.University.Find(unit.UniversityId)
+                };
+
+                _db.Add(newUnit); //add data to University table
                 await _db.SaveChangesAsync(); //wait for database response
                 return RedirectToAction(nameof(UnitManagement)); // redirect to index
             }
 
-            return View(Unit);
+            return View(unit);
+        }
+
+        public JsonResult getcoursebyid(int id)
+        {
+            List<CourseDetailsModel> list = new List<CourseDetailsModel>();
+            list = _db.Course.Where(a => a.University.Id == id).ToList();
+            list.Insert(0, new CourseDetailsModel { Id = 0, CourseName = "Please Select Course" });
+            return Json(new SelectList(list, "Id", "CourseName"));
         }
 
         public async Task<IActionResult> UnitInfo(int id)
