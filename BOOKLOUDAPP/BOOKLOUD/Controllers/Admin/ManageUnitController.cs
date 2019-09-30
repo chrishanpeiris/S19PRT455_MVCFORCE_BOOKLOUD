@@ -84,5 +84,56 @@ namespace BOOKLOUD.Controllers.Admin
             }
         }
 
+        public async Task<IActionResult> EditUnit(int? id)
+        {
+            if (id == null) //check if the id is null
+            {
+                return NotFound();
+            }
+
+            var unit = await _db.Unit.FindAsync(id); // search the id in Book table
+            if (unit == null)
+            {
+                return NotFound();
+            }
+
+            return View(unit);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditUnit(int id, [Bind("Id, UnitCode, UnitName")] UnitDetailsModel unit)
+        {
+            if (id != unit.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _db.Update(unit); // update Book name
+                    await _db.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!UnitExist(unit.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(UnitManagement)); // redirect to index
+            }
+            return View(unit);
+        }
+
+        private bool UnitExist(int id)
+        {
+            return _db.Unit.Any(e => e.Id == id);
+        }
     }
 }
