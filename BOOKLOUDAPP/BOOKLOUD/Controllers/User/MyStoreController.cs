@@ -139,8 +139,31 @@ namespace BOOKLOUD.Controllers.User
             {
                 try
                 {
-                    _db.Update(book);
-                    await _db.SaveChangesAsync();
+                    if (ModelState.IsValid)
+                    {
+                        var files = HttpContext.Request.Form.Files;
+                        foreach (var image in files)
+                        {
+                            if (image != null && image.Length > 0)
+                            {
+                                var file = image;
+
+                                var uploads = Path.Combine(_appEnvironment.WebRootPath, "img\\book_img");
+                                if (file.Length > 0)
+                                {
+                                    var fileName = Guid.NewGuid().ToString().Replace("-", "") + Path.GetExtension(file.FileName);
+                                    using (var fileStream = new FileStream(Path.Combine(uploads, fileName), FileMode.Create))
+                                    {
+                                        await file.CopyToAsync(fileStream);
+                                        book.BookImage = fileName;
+                                    }
+
+                                }
+                            }
+                        }                        
+                        _db.Update(book);
+                        await _db.SaveChangesAsync();
+                    }
                 }
                 catch (DbUpdateConcurrencyException)
                 {
