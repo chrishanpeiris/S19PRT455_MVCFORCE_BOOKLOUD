@@ -5,31 +5,26 @@
 
 <div class="container pt-3">
     <h2>Request Books</h2>
-    <div class="container">
-        <div class="row">
-            <div class="card border-primary mb-3" style="max-width: 20rem;">
-                <div class="card-body">
-                    <h4 class="card-title"><i class="fas fa-chart-line"></i> Add Request</h4>
-                    <p class="card-text">You will find all activities that you have done or still ongoing.</p>
-                    <a asp-controller="RequestBook" asp-action="RequestBook" class="btn btn-primary">Add Request</a>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="card border-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-body">
+                        <h4 class="card-title"><i class="fas fa-chart-line"></i> Add Request</h4>
+                        <p class="card-text">You can request a book.</p>
+                        <a asp-controller="RequestBook" asp-action="RequestBook" class="btn btn-primary">Add Request</a>
+                    </div>
                 </div>
-            </div>
-            <div class="card border-primary mb-3" style="max-width: 20rem;">
-                <div class="card-body">
-                    <h4 class="card-title"><i class="fas fa-book-reader"></i> My Requests</h4>
-                    <p class="card-text">You will find all books that you listed or sold here.</p>
-                    <a asp-controller="RequestBook" asp-action="" class="btn btn-primary">View</a>
-                </div>
-            </div>
-            <div class="card border-primary mb-3" style="max-width: 20rem;">
-                <div class="card-body">
-                    <h4 class="card-title"><i class="fas fa-clipboard-list"></i> Request Status</h4>
-                    <p class="card-text">You will find all books that you have bought here.</p>
-                    <a asp-controller="RequestBook" asp-action="" class="btn btn-primary">View</a>
+                <div class="card border-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-body">
+                        <h4 class="card-title"><i class="fas fa-book-reader"></i> My Requests</h4>
+                        <p class="card-text">You will find all requests that you listed here.</p>
+                        <a asp-controller="RequestBook" asp-action="" class="btn btn-primary">View</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </div>
 <div class="container">
     <p>
