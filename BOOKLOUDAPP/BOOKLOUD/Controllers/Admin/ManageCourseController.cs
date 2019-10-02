@@ -91,7 +91,7 @@ namespace BOOKLOUD.Controllers.Admin
         }
 
         [HttpPost]
-        public async Task<IActionResult> EditCourse(int id, [Bind("Id,CourseName")] CourseDetailsModel course)
+        public async Task<IActionResult> EditCourse(int id, [Bind("Id,CourseName, UniversityId")] CourseDetailsModel course)
         {
             if (id != course.Id)
             {
