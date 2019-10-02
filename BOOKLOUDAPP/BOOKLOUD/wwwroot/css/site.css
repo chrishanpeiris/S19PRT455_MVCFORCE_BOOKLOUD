@@ -43,9 +43,13 @@ html {
     min-height: 100%;
 }
 
+.main-container {
+    min-height: 700px;
+}
+
 body {
     /* Margin bottom by footer height */
-    /*margin-bottom: 60px;*/
+    margin-bottom: 60px;
 }
 
 .footer-container {
