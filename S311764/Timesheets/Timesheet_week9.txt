@@ -1,0 +1,22 @@
+hour 1:	 Group meeting - decide next sprint tasks (on class)
+hour 2:	 continuing Group meeting - divide next sprint tasks (on class)
+hour 3:	 continuing Group meeting - divide next sprint tasks (on class)
+hour 4:	 tried to implement 3 Tier Architecture Week9_BK_T51_N_Tier_Architecture_Implementation (branch - http://tiny.cc/h3srdz)
+hour 5:	 tried to implement 3 Tier Architecture Week9_BK_T51_N_Tier_Architecture_Implementation (branch - http://tiny.cc/h3srdz)
+hour 7:	 tried to implement 3 Tier Architecture Week9_BK_T51_N_Tier_Architecture_Implementation (branch - http://tiny.cc/h3srdz)
+hour 8:	 tried to implement 3 Tier Architecture Week9_BK_T51_N_Tier_Architecture_Implementation (branch - http://tiny.cc/h3srdz)
+hour 9:	 tried to implement 3 Tier Architecture Week9_BK_T51_N_Tier_Architecture_Implementation (branch - http://tiny.cc/h3srdz)
+hour 10: implement edit delete university Week9_BK_57_Edit_Delete_University
+hour 11: continuing - implement edit delete university Week9_BK_57_Edit_Delete_University
+hour 12: implement view university list Week8_BK_T36_View_University_List
+hour 13: implement view delete course Week9_BK_58_View_Delete_Course
+hour 14: continuing implement view delete course Week9_BK_58_View_Delete_Course
+hour 15: help other group on fixing some issues
+hour 16: continuing help other group on fixing some issues
+hour 17: continuing help other group on fixing some issues
+hour 18: read about NUnit test features
+hour 19: continuing read about NUnit test features
+hour 20: group meeting - before class (discuss the remaining features)
+hour 21: continuing group meeting - before class (fix bugs)
+hour 22: continuing group meeting - before class (fix bugs)
+hour 23: continuing group meeting - before class (home page modifications)

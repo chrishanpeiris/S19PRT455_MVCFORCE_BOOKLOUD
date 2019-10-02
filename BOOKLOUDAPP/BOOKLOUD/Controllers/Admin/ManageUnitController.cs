@@ -6,6 +6,7 @@ using BOOKLOUD.Data;
 using BOOKLOUD.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -29,21 +30,39 @@ namespace BOOKLOUD.Controllers.Admin
 
         public IActionResult AddUnit()
         {
-            ViewBag.Units = _db.Unit.ToList();
+            ViewBag.universities = _db.University.ToList();
             return View();
         }
+
         [HttpPost] //post method
-        public async Task<IActionResult> AddUnit([Bind("Id, UnitName, UnitCode, UniversityId")] UnitDetailsModel Unit)
+        public async Task<IActionResult> AddUnit([Bind("Id, UnitCode, UnitName, CourseId, UniversityId ")]UnitDetailsViewModel unit)
         {
-            var universityId = Request.Form["UniversityId"];
             if (ModelState.IsValid)
             {
-                _db.Add(Unit); //add data to Unit table
+
+                var newUnit = new UnitDetailsModel()
+                {
+                    Id = unit.Id,
+                    UnitName = unit.UnitName,
+                    UnitCode = unit.UnitCode,
+                    Course = _db.Course.Find(unit.UniversityId),
+                    University = _db.University.Find(unit.UniversityId)
+                };
+
+                _db.Add(newUnit); //add data to University table
                 await _db.SaveChangesAsync(); //wait for database response
                 return RedirectToAction(nameof(UnitManagement)); // redirect to index
             }
 
-            return View(Unit);
+            return View(unit);
+        }
+
+        public JsonResult getcoursebyid(int id)
+        {
+            List<CourseDetailsModel> list = new List<CourseDetailsModel>();
+            list = _db.Course.Where(a => a.University.Id == id).ToList();
+            list.Insert(0, new CourseDetailsModel { Id = 0, CourseName = "Please Select Course" });
+            return Json(new SelectList(list, "Id", "CourseName"));
         }
 
         public async Task<IActionResult> UnitInfo(int id)
@@ -63,6 +82,86 @@ namespace BOOKLOUD.Controllers.Admin
 
                 return View(unit);
             }
+        }
+
+        public async Task<IActionResult> EditUnit(int? id)
+        {
+            if (id == null) //check if the id is null
+            {
+                return NotFound();
+            }
+
+            var unit = await _db.Unit.FindAsync(id); // search the id in Book table
+            if (unit == null)
+            {
+                return NotFound();
+            }
+
+            return View(unit);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditUnit(int id, [Bind("Id, UnitCode, UnitName, CourseId, UniversityId")] UnitDetailsModel unit)
+        {
+            if (id != unit.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _db.Update(unit); // update Book name
+                    await _db.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!UnitExist(unit.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(UnitManagement)); // redirect to index
+            }
+            return View(unit);
+        }
+
+        public async Task<IActionResult> DeleteUnit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var unit = await _db.Unit 
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (unit == null)
+            {
+                return NotFound();
+            }
+
+            return View(unit);
+        }
+
+        [HttpPost, ActionName("DeleteUnit")]
+
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var unit = await _db.Unit.FindAsync(id);
+            _db.Unit.Remove(unit); // delete method 
+            await _db.SaveChangesAsync(); // wait for the response from the backend
+            return RedirectToAction(nameof(UnitManagement)); // redirect to index
+
+        }
+
+        private bool UnitExist(int id)
+        {
+            return _db.Unit.Any(e => e.Id == id);
         }
     }
 }

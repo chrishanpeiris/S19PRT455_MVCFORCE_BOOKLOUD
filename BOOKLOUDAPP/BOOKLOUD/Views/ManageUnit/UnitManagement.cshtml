@@ -5,32 +5,35 @@
     Layout = "_Layout";
 }
 
-    <div class="container p-3">
-        <h2>Manage Units</h2>
-        <a asp-controller="ManageUnit" asp-action="AddUnit" class="btn btn-primary mb-3">Create New Unit</a>
-        <table class="table">
-            <thead class="thead-dark">
+<div class="container p-3">
+    <h2>Manage Units</h2>
+    <a asp-controller="ManageUnit" asp-action="AddUnit" class="btn btn-primary mb-3">Create New Unit</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Unit Name</th>
+                <th>Unit Code</th>
+                <th>Controls</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
                 <tr>
-                    <th>Unit Name</th>
-                    <th>Controls</th>
-
-            </thead>
-            <tbody>
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.UnitName)
-                            @Html.DisplayFor(modelItem => item.UnitCode)
-                        </td>
-                        <td>
-                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                            <a asp-action="UnitInfo" asp-route-id="@item.Id">Details</a> |
-                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-        <a class="nav-link" asp-controller="AdminPanel" asp-action="Index"><i class="far fa-arrow-alt-circle-left"></i> Back To Admin Panel</a>
-    </div>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UnitName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UnitCode)
+                    </td>
+                    <td>
+                        <a asp-action="EditUnit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="UnitInfo" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="DeleteUnit" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a class="nav-link" asp-controller="AdminPanel" asp-action="Index"><i class="far fa-arrow-alt-circle-left"></i> Back To Admin Panel</a>
+</div>

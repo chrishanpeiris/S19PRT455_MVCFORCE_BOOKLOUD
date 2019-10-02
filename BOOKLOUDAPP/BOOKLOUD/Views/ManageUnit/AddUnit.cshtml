@@ -1,51 +1,76 @@
-﻿@model BOOKLOUD.Models.UnitDetailsModel
+﻿@model BOOKLOUD.Models.UnitDetailsViewModel
 
 @{
     ViewData["Title"] = "Add Units";
 }
-<<<<<<< HEAD
-    <div class="container p-3">
-        <h1>Add Units</h1>
-           <hr />
-=======
 
-
-    <div class="container p-3">
-        <h2>Add Unit</h2>
-
->>>>>>> 99afe349e56506cfd0d58db6a7dae546cece9f46
-        <div class="row">
-            <div class="col-md-4">
-                <form asp-action="View">
-                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                    <div class="form-group">
-                        <label asp-for="UnitCode" class="control-label"></label>
-                        <input asp-for="UnitCode" class="form-control" />
-                        <span asp-validation-for="UnitCode" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="UnitName" class="control-label"></label>
-                        <input asp-for="UnitName" class="form-control" />
-                        <span asp-validation-for="UnitName" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" value="Create" class="btn btn-primary" />
-                    </div>
-                </form>
-            </div>
+<div class="container p-3">
+    <h2>Add Unit</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="AddUnit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="UnitCode" class="control-label"></label>
+                    <input asp-for="UnitCode" class="form-control" />
+                    <span asp-validation-for="UnitCode" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="UnitName" class="control-label"></label>
+                    <input asp-for="UnitName" class="form-control" />
+                    <span asp-validation-for="UnitName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="UniversityIdField">University</label>
+                    <select id="UniversityIdField" class="form-control" name="UniversityId" asp-items="@(new SelectList(ViewBag.universities, "Id", "UniversityName"))">
+                        <option>- Select University -</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="CourseId">Course</label>
+                    <select id="CourseId" asp-for="Id" class="form-control" name="CourseList" asp-items="@(new SelectList(string.Empty, "Id", "UniversityName"))">
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
         </div>
+    </div>
 
-<<<<<<< HEAD
-        <div>
-            <a asp-action="UnitManagement">Back to List</a>
-        </div>
-=======
+
+    <div>
+        <a asp-action="UnitManagement">Back to List</a>
+    </div>
+
     <div>
         <a class="nav-link" asp-controller="ManageUnit" asp-action="UnitManagement"><i class="far fa-arrow-alt-circle-left"></i> Back To List</a>
     </div>
->>>>>>> 99afe349e56506cfd0d58db6a7dae546cece9f46
-    </div>
 
-        @section Scripts {
-            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-        }
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        $(document).ready(function () {
+            $("#UniversityIdField").change(function () {
+                var url = "getcoursebyid";
+                var ddlsource = "#UniversityIdField";
+                $.getJSON(url,
+                    { id: $(ddlsource).val() },
+                    function (data) {
+                        var items = '';
+                        $("#CourseId").empty();
+                        $.each(data,
+                            function (i, row) {
+                                items += "<option value='" + row.value + "' >" + row.text + "</option>"
+                            });
+                        $("#CourseId").html(items);
+                    });
+            });
+
+        })
+    </script>
+
+}
