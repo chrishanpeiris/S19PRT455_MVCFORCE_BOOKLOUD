@@ -1,0 +1,23 @@
+hour 1:  Group discussion - Design Tasks 
+hour 2:  Group discussion - Design Tasks 
+hour 3:  Group discussion - Design Tasks 
+hour 4:  Work on Week9_BK_T52_Edit_Image_Books_Reopen
+hour 5:  Work on Three tier architecture_Practice
+hour 6:  Work on Three tier architecture_Practice
+hour 7:  Research on how to fix Week9_BK_T52_Edit_Image_Books_Reopen
+hour 8:  Work on Week9_BK_T52_Edit_Image_Books_Reopen 
+hour 9:  Work on Week9_BK_T52_Edit_Image_Books_Reopen - Done
+hour 10: Work on Week9_BK_T62_Create Request Book Index and add to layout
+hour 11: Work on Week9_BK_T62_Create Request Book Index and add to layout
+hour 12: Work on Week9_BK_T62_Add Request Book View
+hour 13: Work on Week9_BK_T62_Add Request Book View
+hour 14: Work on Week9_BK_T62_Create Request Book Index and add to layout - Done
+hour 15: Work on Week9_BK_T62_Add Request Book View
+hour 16: Work on Week9_BK_T62_Add Request Book View - Done
+hour 17: Week9_BK_T62_Create Request Book Index and add to layout - Small changes
+hour 18: Week9_BK_T62_Create Request Book Index and add to layout - Small changes
+hour 19: Week9_BK_T62_Add Request Book View - Update and some other changes
+hour 20: Work on Optimize:Small changes not included in task
+hour 21: Group discussion before class 
+hour 22: Group discussion before class 
+hour 23: Group discussion before class
