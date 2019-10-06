@@ -32,8 +32,8 @@ namespace BOOKLOUD.Controllers.User
         public IActionResult Index()
         {
             return View();
-        
-    }
+
+        }
 
         public IActionResult RecentActivities()
         {
@@ -92,7 +92,7 @@ namespace BOOKLOUD.Controllers.User
             string fileName = "";
             if (System.IO.Directory.Exists(webRoot + "/img/" + "/book_img/"))
             {
-                string[] strfiles = Directory.GetFiles(webRoot + "/img/"  + "/book_img/", "*.*");
+                string[] strfiles = Directory.GetFiles(webRoot + "/img/" + "/book_img/", "*.*");
 
                 if (strfiles.Length > 0)
                 {
@@ -104,7 +104,7 @@ namespace BOOKLOUD.Controllers.User
                         string _CurrentFile = strfiles[i].ToString();
                         if (System.IO.File.Exists(_CurrentFile))
                         {
-                            string tempFileURL = "/img/"  + "/book_img/" + Path.GetFileName(_CurrentFile);
+                            string tempFileURL = "/img/" + "/book_img/" + Path.GetFileName(_CurrentFile);
                             img_p = tempFileURL;
                         }
 
@@ -142,25 +142,32 @@ namespace BOOKLOUD.Controllers.User
                     if (ModelState.IsValid)
                     {
                         var files = HttpContext.Request.Form.Files;
-                        foreach (var image in files)
+                        if (files.Count == 0)
                         {
-                            if (image != null && image.Length > 0)
+                            book.BookImage = "book_image_not_available.png";
+                        }
+                        else
+                        {
+                            foreach (var image in files)
                             {
-                                var file = image;
-
-                                var uploads = Path.Combine(_appEnvironment.WebRootPath, "img\\book_img");
-                                if (file.Length > 0)
+                                if (image != null && image.Length > 0)
                                 {
-                                    var fileName = Guid.NewGuid().ToString().Replace("-", "") + Path.GetExtension(file.FileName);
-                                    using (var fileStream = new FileStream(Path.Combine(uploads, fileName), FileMode.Create))
-                                    {
-                                        await file.CopyToAsync(fileStream);
-                                        book.BookImage = fileName;
-                                    }
+                                    var file = image;
 
+                                    var uploads = Path.Combine(_appEnvironment.WebRootPath, "img\\book_img");
+                                    if (file.Length > 0)
+                                    {
+                                        var fileName = Guid.NewGuid().ToString().Replace("-", "") + Path.GetExtension(file.FileName);
+                                        using (var fileStream = new FileStream(Path.Combine(uploads, fileName), FileMode.Create))
+                                        {
+                                            await file.CopyToAsync(fileStream);
+                                            book.BookImage = fileName;
+                                        }
+
+                                    }
                                 }
                             }
-                        }                        
+                        }
                         _db.Update(book);
                         await _db.SaveChangesAsync();
                     }
@@ -177,7 +184,7 @@ namespace BOOKLOUD.Controllers.User
                     }
                 }
                 return RedirectToAction(nameof(MyBooks));
-            }           
+            }
             return View(book);
         }
         // GET: Books Remove

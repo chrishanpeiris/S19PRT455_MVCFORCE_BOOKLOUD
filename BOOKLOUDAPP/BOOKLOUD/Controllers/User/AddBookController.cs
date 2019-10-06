@@ -46,9 +46,9 @@ namespace BOOKLOUD.Controllers.User
 
         public JsonResult getcoursebyid(int id)
         {
-            List<CourseDetailsModel> list =new List<CourseDetailsModel>();
+            List<CourseDetailsModel> list = new List<CourseDetailsModel>();
             list = _db.Course.Where(a => a.University.Id == id).ToList();
-            list.Insert(0, new CourseDetailsModel{Id=0, CourseName = "Please Select Course"});
+            list.Insert(0, new CourseDetailsModel { Id = 0, CourseName = "Please Select Course" });
             return Json(new SelectList(list, "Id", "CourseName"));
         }
 
@@ -67,29 +67,40 @@ namespace BOOKLOUD.Controllers.User
             if (ModelState.IsValid)
             {
                 var files = HttpContext.Request.Form.Files;
-                foreach (var image in files)
+                if (files.Count == 0)
                 {
-                    if (image != null && image.Length > 0)
+                    book.BookImage = "book_image_not_available.png";
+                }
+
+                else
+                {
+
+                    foreach (var image in files)
                     {
-                        var file = image;
-
-                        var uploads = Path.Combine(_appEnvironment.WebRootPath, "img\\book_img");
-                        if (file.Length > 0)
+                        if (image != null && image.Length > 0)
                         {
-                            var fileName = Guid.NewGuid().ToString().Replace("-", "") + Path.GetExtension(file.FileName);
-                            using (var fileStream = new FileStream(Path.Combine(uploads, fileName), FileMode.Create))
-                            {
-                                await file.CopyToAsync(fileStream);
-                                book.BookImage = fileName;
-                            }
+                            var file = image;
 
+                            var uploads = Path.Combine(_appEnvironment.WebRootPath, "img\\book_img");
+                            if (file.Length > 0)
+                            {
+                                var fileName = Guid.NewGuid().ToString().Replace("-", "") + Path.GetExtension(file.FileName);
+                                using (var fileStream = new FileStream(Path.Combine(uploads, fileName), FileMode.Create))
+                                {
+                                    await file.CopyToAsync(fileStream);
+                                    book.BookImage = fileName;
+                                }
+
+                            }
                         }
+
                     }
+
                 }
                 _db.Add(book); //add data to Book table
                 await _db.SaveChangesAsync(); //wait for database response
             }
-                return RedirectToRoute("Default", new { Controller = "MyStore", Action = "MyBooks" });
+            return RedirectToRoute("Default", new { Controller = "MyStore", Action = "MyBooks" });
         }
     }
 

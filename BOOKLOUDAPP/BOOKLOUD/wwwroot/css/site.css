@@ -131,15 +131,31 @@ body {
 .autoCompleteImg {
     width: 75px;
     height: 75px;
-    padding-right: 3px
+    padding-right: 3px;
 }
 
     .autoCompleteImg.ui-state-active {
         border: none;
         background: none !important;
         font-weight: normal;
-        color: #fff
+        color: #fff;
     }
+
+/*Validations*/
+#addBook .validation-summary-errors ul, #editbook .validation-summary-errors ul {
+    padding-left: 0px;
+}
+
+#addBook .validation-summary-errors ul li, #editbook .validation-summary-errors ul li {
+        list-style-type: none !important;
+}
+
+.form-group.required .control-label:after {
+    content:"*";
+    color:red;
+    padding-left: 2px;
+    font-weight: lighter;
+}
 
 /*footer*/
 .footer-bs {

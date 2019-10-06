@@ -8,14 +8,17 @@
     <h2>Add Books</h2>
 
     <section class="col-md-4 p-0">
-        <form asp-controller="AddBook" asp-action="Create" enctype="multipart/form-data" method="post">
-            <div class="form-group">
-                <label asp-for="BookName">Book Title</label>
-                <input asp-for="BookName" type="text" class="form-control"  placeholder="Enter book title" required>
+        <form asp-controller="AddBook" asp-action="Create" enctype="multipart/form-data" method="post" id="addBook">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group required">
+                <label asp-for="BookName" class="control-label">Book Title</label>
+                <input asp-for="BookName" type="text" class="form-control" placeholder="Enter book title">
+                <span asp-validation-for="BookName" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="BookAuthor">Author</label>
+            <div class="form-group required">
+                <label asp-for="BookAuthor" class="control-label">Author</label>
                 <input type="text" asp-for="BookAuthor" class="form-control" placeholder="Enter author name">
+                <span asp-validation-for="BookAuthor" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="BookEdition">Edition</label>
@@ -28,7 +31,8 @@
             <div class="form-group">
                 <label for="UniversityId">University</label>
                 <select id="UniversityId" asp-for="Id" class="form-control" name="UniversityList" asp-items="@(new SelectList(ViewBag.universities, "Id", "UniversityName"))">
-                    <option>- Select University -</option>
+                    <option selected="true" disabled="disabled">- Select University -</option>
+                    <option >- Unknown -</option>
                 </select>
             </div>
             <div class="form-group">
@@ -45,9 +49,10 @@
                 <label asp-for="BookImage">Book Image</label>
                 <input asp-for="BookImage" type="file" name="BookImage" class="form-control-file">
             </div>
-            <div class="form-group">
-                <label asp-for="BookPrice">Book Price</label>
-                <input asp-for="BookPrice" type="text" class="form-control" placeholder="Enter Book Price" required>
+            <div class="form-group required">
+                <label asp-for="BookPrice" class="control-label">Book Price</label>
+                <input asp-for="BookPrice" type="text" class="form-control" placeholder="Enter Book Price">
+                <span asp-validation-for="BookPrice" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="BookDescription">Book Description</label>
@@ -57,3 +62,6 @@
         </form>
     </section>
 </div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
