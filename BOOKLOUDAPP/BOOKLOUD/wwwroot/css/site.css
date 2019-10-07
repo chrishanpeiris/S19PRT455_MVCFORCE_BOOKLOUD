@@ -11,6 +11,7 @@ a.navbar-brand {
 -------------------------------------------------- */
 html {
     font-size: 14px;
+    background: #555555;
 }
 
 @media (min-width: 768px) {
@@ -155,6 +156,47 @@ padding-left: 0px !important;
     color:red;
     padding-left: 2px;
     font-weight: lighter;
+}
+
+
+/*body styles*/
+
+#BookCarouselWrapper {
+    margin: 0 auto;
+    text-align: center;
+    width: 35%;
+}
+.carousel-img {
+    width: 450px;
+    height: 450px;
+}
+#BookCarouselWrapper .carousel-control-prev-icon, #BookCarouselWrapper .carousel-control-next-icon {
+    width: 35px !important;
+    height: 45px !important;
+    background-color: #0c0c0c !important;
+}
+#latestBooks {
+    margin-top: 20px;
+}
+#latestBooks p {
+    font-size: 18px !important;
+}
+#BookCarouselWrapper .carousel-caption {
+    margin: -25px -70px;
+    background: rgba(0, 0, 0, 0.5);
+}
+#BookCarouselWrapper .carousel-caption h5{
+    font-size: 35px;
+}
+#BookCarouselWrapper .carousel-caption p {
+    font-size: 18px;
+}
+.viewBook {
+    color: #fff;
+}
+.viewBook:hover {
+    color: #cac5c5;
+    text-decoration: underline;
 }
 
 /*footer*/
