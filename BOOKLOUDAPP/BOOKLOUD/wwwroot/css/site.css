@@ -142,12 +142,12 @@ body {
     }
 
 /*Validations*/
-#addBook .validation-summary-errors ul, #editbook .validation-summary-errors ul {
-    padding-left: 0px;
+.validation-summary-errors ul{
+padding-left: 0px !important;
 }
 
-#addBook .validation-summary-errors ul li, #editbook .validation-summary-errors ul li {
-        list-style-type: none !important;
+.validation-summary-errors ul li {
+    list-style-type: none !important;
 }
 
 .form-group.required .control-label:after {
