@@ -21,5 +21,6 @@ namespace BOOKLOUD.Models
         [Range(0, 9999, ErrorMessage = "Book Price should be a number and under 10000")]
         public int BookPrice { get; set; } = 1;
         public string BookDescription { get; set; }
+        public string UserId { get; set; }
     }
 }

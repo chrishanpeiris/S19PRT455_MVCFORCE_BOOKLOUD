@@ -7,6 +7,7 @@ using BOOKLOUD.Data;
 using BOOKLOUD.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -19,11 +20,13 @@ namespace BOOKLOUD.Controllers.User
     {
         private ApplicationDbContext _db;
         private readonly IHostingEnvironment _appEnvironment;
+        private UserManager<ApplicationUser> _signinuser;
 
-        public AddBookController(ApplicationDbContext db, IHostingEnvironment appEnvironment)
+        public AddBookController(ApplicationDbContext db, IHostingEnvironment appEnvironment, UserManager<ApplicationUser> user)
         {
             _db = db;
             _appEnvironment = appEnvironment;
+            _signinuser = user;
         }
 
         public IActionResult Index()
@@ -97,6 +100,13 @@ namespace BOOKLOUD.Controllers.User
                     }
 
                 }
+
+                var LoggedinUser = _signinuser.GetUserId(HttpContext.User);
+                ApplicationUser user = _signinuser.FindByIdAsync(LoggedinUser).Result;
+                var emailId = user.Email;
+                book.UserId = emailId;
+               // book.UniversityLocation = 
+
                 _db.Add(book); //add data to Book table
                 await _db.SaveChangesAsync(); //wait for database response
             }
