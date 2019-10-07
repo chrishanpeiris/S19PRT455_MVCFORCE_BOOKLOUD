@@ -16,7 +16,7 @@
                     <input type="hidden" asp-for="Id" />
                     <div class="form-group required">
                         <label asp-for="BookName" class="control-label"></label>
-                        <input asp-for="BookName" class="form-control" />
+                        <input asp-for="BookName" class="form-control" required/>
                         <span asp-validation-for="BookName" class="text-danger"></span>
                     </div>
                     <div class="form-group required">
@@ -56,7 +56,7 @@
                     </div>
                     <div class="form-group required">
                         <label asp-for="BookPrice" class="control-label"></label>
-                        <input asp-for="BookPrice" class="form-control" />
+                        <input asp-for="BookPrice" type="text" class="form-control"/>
                         <span asp-validation-for="BookPrice" class="text-danger"></span>
                     </div>
                     <div class="form-group">
