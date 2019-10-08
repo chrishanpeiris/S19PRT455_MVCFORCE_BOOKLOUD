@@ -1,0 +1,19 @@
+hour 1:	 Group meeting - decide next sprint tasks (on class)
+hour 2:	 continuing Group meeting - divide next sprint tasks (on class)
+hour 3:	 continuing Group meeting - divide next sprint tasks (on class)
+hour 4:	 implement model validations - Week10_BK_T64_Add_Edit_Book_Validation
+hour 5:	 continuing implement model validations - Week10_BK_T67_Add_Edit_Unit_Validation
+hour 7:	 Researching on how to add validation to cascading models - Week10_BK_T67_Add_Edit_Unit_Validation
+hour 8:	 Add validation only to viewmodel instead of virtual models- Week10_BK_T67_Add_Edit_Unit_Validation
+hour 9:	 Add top 10 books to the home page as carousel - Week10_BK_T69_HomePage_Modifications
+hour 10: continuing add top 10 books to the home page as carousel - Week10_BK_T69_HomePage_Modifications
+hour 11: continuing add top 10 books to the home page as carousel - Week10_BK_T69_HomePage_Modifications
+hour 12: Add logged in user id when adding a new book - Week10_BK_70_AddLoggedinUserID_WhenAddingBook
+hour 13: continuing Add logged in user id when adding a new book + added migration - Week10_BK_70_AddLoggedinUserID_WhenAddingBook
+hour 14: Research on Unit Testing - Week10_BK_T68_UnitTestForSearch
+hour 15: Implement Unit testing - Week10_BK_T68_UnitTestForSearch
+hour 16: continuing add Unit test for search book - Week10_BK_T68_UnitTestForSearch
+hour 17: Group discussion (before class) - implement more unit tests 
+hour 18: Group discussion (before class) - changing home page content 
+hour 19: Group discussion (before class) - fixing issues
+
