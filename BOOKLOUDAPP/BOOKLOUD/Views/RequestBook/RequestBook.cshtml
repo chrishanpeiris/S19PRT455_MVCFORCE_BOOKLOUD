@@ -5,7 +5,7 @@
 }
     <div class="container pt-3">
         <h1>Request a Book</h1>
-
+        Do you want to add a book to the library or request material from other libraries? Just let me know what you need, and I'll order for you and let you know when your requests are here.
         <h4>Add Request</h4>
         <hr />
         <div class="row">
@@ -21,44 +21,14 @@
                         <label asp-for="BookAuthor" class="control-label"></label>
                         <input asp-for="BookAuthor" class="form-control" />
                         <span asp-validation-for="BookAuthor" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="BookEdition" class="control-label"></label>
-                        <input asp-for="BookEdition" class="form-control" />
-                        <span asp-validation-for="BookEdition" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="BookIsbn" class="control-label"></label>
-                        <input asp-for="BookIsbn" class="form-control" />
-                        <span asp-validation-for="BookIsbn" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="UniversityLocation" class="control-label"></label>
-                        <input asp-for="UniversityLocation" class="form-control" />
-                        <span asp-validation-for="UniversityLocation" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="CourseName" class="control-label"></label>
-                        <input asp-for="CourseName" class="form-control" />
-                        <span asp-validation-for="CourseName" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="UnitName" class="control-label"></label>
-                        <input asp-for="UnitName" class="form-control" />
-                        <span asp-validation-for="UnitName" class="text-danger"></span>
-                    </div>
+                    </div>       
                     <div class="form-group">
                         <label asp-for="BookImage">Book Image</label>
                         <input asp-for="BookImage" type="file" name="BookImage" class="form-control-file">
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="BookPrice" class="control-label"></label>
-                        <input asp-for="BookPrice" class="form-control" />
-                        <span asp-validation-for="BookPrice" class="text-danger"></span>
-                    </div>
+                    </div>                  
                     <div class="form-group">
                         <label asp-for="BookDescription" class="control-label"></label>
-                        <input asp-for="BookDescription" class="form-control" />
+                        <textarea asp-for="BookDescription" class="form-control" />
                         <span asp-validation-for="BookDescription" class="text-danger"></span>
                     </div>
                     <div class="form-group">
