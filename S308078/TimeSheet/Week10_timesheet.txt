@@ -1,0 +1,23 @@
+hour 1:  Group discussion - Design Tasks 
+hour 2:  Group discussion - Design Tasks 
+hour 3:  Group discussion - Design Tasks 
+hour 4:  Work on Week10_BK_T66_Add_Edit_Course_Validation
+hour 5:  Research on Week10_BK_T68_UnitTestForSearch
+hour 6:  Research on Week10_BK_T68_UnitTestForSearch
+hour 7:  Research on Week10_BK_T68_UnitTestForSearch
+hour 8:  Work on Week10_BK_T66_Add_Edit_Course_Validation 
+hour 9:  Work on Week10_BK_T66_Add_Edit_Course_Validation - Done
+hour 10: Work on Week10_BK_71_BookRequest
+hour 11: Work on Week10_BK_71_BookRequest
+hour 12: Work on Week10_BK_71_BookRequest - Done
+hour 13: Work on Optimize:Small changes not included in task
+hour 14: Work on Optimize:Small changes not included in task
+hour 15: Work on Week10_BK_T66_Add_Edit_Course_Validation - Small changes
+hour 16: Pull changes from Git and cannot update the database
+hour 17: Research on cannot update the database
+hour 18: Research on cannot update the database
+hour 19: Research on cannot update the database
+hour 20: Research on cannot update the database
+hour 21: Group discussion before class 
+hour 22: Group discussion before class 
+hour 23: Group discussion before class
