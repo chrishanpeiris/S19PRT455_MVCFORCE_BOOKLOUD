@@ -31,9 +31,9 @@
         <div class="carousel-inner">
             @foreach (var item in ViewBag.Books)
             {
-                <div class="carousel-item">
-                    <img class="d-block carousel-img" src="~/img/book_img/@item.BookImage" alt="First slide">
-                    <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-item col-12">
+                    <img class="d-block carousel-img img-fluid" src="~/img/book_img/@item.BookImage" alt="slide"/>
+                    <div class="carousel-caption">
                         <h5>@item.BookName</h5>
                         <p>By @item.BookAuthor</p>
                         <a class="viewBook" asp-controller="MyStore"  asp-action="ViewBooks" asp-route-id="@item.Id">View</a>
