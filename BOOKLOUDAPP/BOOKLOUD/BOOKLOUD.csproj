@@ -9,6 +9,8 @@
   <ItemGroup>
     <Compile Remove="Data\Migrations\20190916140345_CasCade_Unit_Info.cs" />
     <Compile Remove="Data\Migrations\20190916140345_CasCade_Unit_Info.Designer.cs" />
+    <Compile Remove="Data\Migrations\20191009052442_updateCourseDetailsModel.cs" />
+    <Compile Remove="Data\Migrations\20191009052442_updateCourseDetailsModel.Designer.cs" />
   </ItemGroup>
 
 

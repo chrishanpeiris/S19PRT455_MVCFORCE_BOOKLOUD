@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -10,8 +10,7 @@ namespace BOOKLOUD.Models
     {
         public int Id { get; set; }
         public string CourseName { get; set; }
-        [Required]
-        [StringLength(25, ErrorMessage = "CourseName length can't be more than 25 letters.")]
+        
         public virtual UniversityDetailsModel University { get; set; }
 
         public virtual ICollection<UnitDetailsModel> Unit { get; set; }
@@ -22,9 +21,11 @@ namespace BOOKLOUD.Models
     {
         public int Id { get; set; }
         public string CourseName { get; set; }
-        
+        [Required]
+        [StringLength(25, ErrorMessage = "CourseName length can't be more than 25 letters.")]
+
         public int UniversityId { get; set; }
-        
+
 
     }
 
