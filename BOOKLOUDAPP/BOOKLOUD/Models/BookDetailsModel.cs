@@ -6,10 +6,10 @@ namespace BOOKLOUD.Models
     {
         public int Id { get; set; }
         [Required]
-        [StringLength(25, ErrorMessage = "Book Name length can't be more than 25 letters.")]
+        [StringLength(50, ErrorMessage = "Book Name length can't be more than 50 letters.")]
         public string BookName { get; set; }
         [Required]
-        [StringLength(25, ErrorMessage = "Author Name length can't be more than 25 letters.")]
+        [StringLength(50, ErrorMessage = "Author Name length can't be more than 50 letters.")]
         public string BookAuthor { get; set; }
         public string BookEdition { get; set; }
         public string BookIsbn { get; set; }

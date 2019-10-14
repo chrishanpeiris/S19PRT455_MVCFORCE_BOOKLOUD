@@ -55,7 +55,17 @@
 @section Scripts {
     <script>
         $(document).ready(function () {
-            $( ".carousel-inner .carousel-item:first-child").addClass('active');
+            $(".carousel-inner .carousel-item:first-child").addClass('active');
+
+            $("#BookName").autocomplete({
+                    source: '/api/book/search'
+                })
+                .autocomplete('instance')._renderItem = function (ul, item) {
+                    return $('<li>')
+                        .append('<img class="autoCompleteImg" src=' + '/img/book_img/' + item.imgPath + ' />')
+                        .append(item.label)
+                        .appendTo(ul);
+                };
         })
     </script>
 }

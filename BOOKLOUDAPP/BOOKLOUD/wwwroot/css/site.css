@@ -5,6 +5,7 @@ a.navbar-brand {
     white-space: normal;
     text-align: center;
     word-break: break-all;
+    font-size: 25px;
 }
 
 /* Sticky footer styles
@@ -167,7 +168,7 @@ padding-left: 0px !important;
     width: 35%;*/
 }
 .carousel-img {
-    width: 450px;
+    width: 400px;
     height: 450px;
     margin: 0 auto;
     text-align: center;
@@ -185,7 +186,7 @@ padding-left: 0px !important;
 #BookCarouselWrapper .carousel-caption {
     /*margin: -25px -70px;*/
     background: rgba(0, 0, 0, 0.5);
-    width: 448px;
+    width: 400px;
     text-align: center;
     margin: 0 auto;
     margin-bottom: -18px;
@@ -228,6 +229,16 @@ padding-left: 0px !important;
     text-decoration: underline;
 }
 
+#myStore .card-body, #adminPanel .card-body {
+    text-align: center;
+}
+
+.copyR {
+    color: white !important;
+}
+.copyR a{
+    color: white !important;
+}
 /*footer*/
 .footer-bs {
     background-color: #555;

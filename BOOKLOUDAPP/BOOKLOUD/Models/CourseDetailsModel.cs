@@ -20,10 +20,12 @@ namespace BOOKLOUD.Models
     public class CourseDetailsViewModel
     {
         public int Id { get; set; }
-        public string CourseName { get; set; }
+
         [Required]
         [StringLength(25, ErrorMessage = "CourseName length can't be more than 25 letters.")]
+        public string CourseName { get; set; }
 
+        [Required]
         public int UniversityId { get; set; }
 
 

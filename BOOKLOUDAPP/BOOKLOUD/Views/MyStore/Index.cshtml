@@ -5,77 +5,76 @@
     Layout = "_Layout";
 }
 
-    <div class="container pt-3">
-        <h2>My Store</h2>
+<div class="container pt-3" id="myStore">
+    <h2>My Store</h2>
+    <div class="container">
+        <div class="row">
+            <div class="card border-primary mb-3 mr-2 col-md-3 col-sm-12">
+                <div class="card-body">
+                    <h4 class="card-title"><i class="fas fa-chart-line"></i> Recent Activity</h4>
+                    <p class="card-text">You will find all activities that you have done or still ongoing.</p>
+                    <a asp-controller="MyStore" asp-action="RecentActivities" class="btn btn-primary">View</a>
+                </div>
+            </div>
+            <div class="card border-primary mb-3 mr-2 col-md-3 col-sm-12">
+                <div class="card-body">
+                    <h4 class="card-title"><i class="fas fa-book-reader"></i> My Books</h4>
+                    <p class="card-text">You will find all books that you listed or sold here.</p>
+                    <a asp-controller="MyStore" asp-action="MyBooks" class="btn btn-primary">View</a>
+                </div>
+            </div>
+            <div class="card border-primary mb-3 mr-2 col-md-3 col-sm-12">
+                <div class="card-body">
+                    <h4 class="card-title"><i class="fas fa-clipboard-list"></i> Purchases</h4>
+                    <p class="card-text">You will find all books that you have bought here.</p>
+                    <a asp-controller="MyStore" asp-action="PurchaseHistory" class="btn btn-primary">View</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- div class="container">
+    <p>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            Find other textbooks in Bookloud
+        </button>
+    </p>
+    <div class="collapse" id="collapseExample">
         <div class="container">
             <div class="row">
-                <div class="card border-primary mb-3" style="max-width: 20rem;">
-                    <div class="card-body">
-                        <h4 class="card-title"><i class="fas fa-chart-line"></i> Recent Activity</h4>
-                        <p class="card-text">You will find all activities that you have done or still ongoing.</p>
-                        <a asp-controller="MyStore" asp-action="RecentActivities" class="btn btn-primary">View</a>
-                    </div>
-                </div>
-                <div class="card border-primary mb-3" style="max-width: 20rem;">
-                    <div class="card-body">
-                        <h4 class="card-title"><i class="fas fa-book-reader"></i> My Books</h4>
-                        <p class="card-text">You will find all books that you listed or sold here.</p>
-                        <a asp-controller="MyStore" asp-action="MyBooks" class="btn btn-primary">View</a>
-                    </div>
-                </div>
-                <div class="card border-primary mb-3" style="max-width: 20rem;">
-                    <div class="card-body">
-                        <h4 class="card-title"><i class="fas fa-clipboard-list"></i> Purchases</h4>
-                        <p class="card-text">You will find all books that you have bought here.</p>
-                        <a asp-controller="MyStore" asp-action="PurchaseHistory" class="btn btn-primary">View</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <p>
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                Find other textbooks in Bookloud
-            </button>
-        </p>
-        <div class="collapse" id="collapseExample">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Book 1</h5>
-                                <p class="card-text"><p class="card-text"><p class="card-text">View the ID 1 book.</p>
-                                <p a asp-controller="MyStore" asp-action="ViewBooks" asp-route-id="1" class="btn btn-primary">View</p>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Book 1</h5>
+                            <p class="card-text"><p class="card-text"><p class="card-text">View the ID 1 book.</p>
+                            <p a asp-controller="MyStore" asp-action="ViewBooks" asp-route-id="1" class="btn btn-primary">View</p>
 
-                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Book 2</h5>
+                            <p class="card-text">View the ID 2 book.</p>
+                            <p a asp-controller="MyStore" asp-action="ViewBooks" asp-route-id="1" class="btn btn-primary">View</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Book 3</h5>
+                            <p class="card-text">View the ID 3 book.</p>
+                            <p a asp-controller="MyStore" asp-action="ViewBooks" asp-route-id="1" class="btn btn-primary">View</p>
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Book 2</h5>
-                                <p class="card-text">View the ID 2 book.</p>
+                                <h5 class="card-title">Book 4</h5>
+                                <p class="card-text">View the ID  book.</p>
                                 <p a asp-controller="MyStore" asp-action="ViewBooks" asp-route-id="1" class="btn btn-primary">View</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Book 3</h5>
-                                <p class="card-text">View the ID 3 book.</p>
-                                <p a asp-controller="MyStore" asp-action="ViewBooks" asp-route-id="1" class="btn btn-primary">View</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Book 4</h5>
-                                    <p class="card-text">View the ID  book.</p>
-                                    <p a asp-controller="MyStore" asp-action="ViewBooks" asp-route-id="1" class="btn btn-primary">View</p>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -83,3 +82,4 @@
             </div>
         </div>
     </div>
+</!--div-->

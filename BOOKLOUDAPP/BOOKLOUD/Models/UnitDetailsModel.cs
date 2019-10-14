@@ -20,10 +20,10 @@ namespace BOOKLOUD.Models
     {
         public int Id { get; set; }
         [Required]
-        [StringLength(10, ErrorMessage = "Unit Code length can't be more than 10 letters.")]
+        [StringLength(20, ErrorMessage = "Unit Code length can't be more than 20 letters.")]
         public string UnitCode { get; set; }
         [Required]
-        [StringLength(25, ErrorMessage = "Unit Name length can't be more than 25 letters.")]
+        [StringLength(50, ErrorMessage = "Unit Name length can't be more than 50 letters.")]
         public string UnitName { get; set; }
         [Required]
         public int CourseId { get; set; }

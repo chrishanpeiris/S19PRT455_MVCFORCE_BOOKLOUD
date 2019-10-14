@@ -65,7 +65,7 @@ namespace BOOKLOUD.Controllers.User
         }
 
         [HttpPost] //post method
-        public async Task<IActionResult> Create(Book book)
+        public async Task<IActionResult> Create([Bind("BookName, BookAuthor, BookEdition, BookIsbn, UniversityLocation, CourseName, UnitName, BookImage, BookPrice, BookDescription")] Book book)
         {
             if (ModelState.IsValid)
             {
@@ -105,7 +105,6 @@ namespace BOOKLOUD.Controllers.User
                 ApplicationUser user = _signinuser.FindByIdAsync(LoggedinUser).Result;
                 var emailId = user.Email;
                 book.UserId = emailId;
-               // book.UniversityLocation = 
 
                 _db.Add(book); //add data to Book table
                 await _db.SaveChangesAsync(); //wait for database response

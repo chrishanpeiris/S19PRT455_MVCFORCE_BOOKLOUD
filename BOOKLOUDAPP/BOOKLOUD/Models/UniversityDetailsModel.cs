@@ -11,7 +11,7 @@ namespace BOOKLOUD.Models
         public int Id { get; set; }
 
         [Required]
-        [StringLength(10, ErrorMessage = "University Name length can't be more than 25 letters.")]
+        [StringLength(50, ErrorMessage = "University Name length can't be more than 50 letters.")]
         public string UniversityName { get; set; }
         public virtual ICollection<CourseDetailsModel> Course { get; set; }
     }

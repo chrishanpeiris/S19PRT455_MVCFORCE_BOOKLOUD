@@ -14,6 +14,7 @@
             <th>Book Name</th>
             <th>Book Author</th>
             <th>Book ISBN</th>
+            <th>View Book</th>
         </tr>
         </thead>
         <tbody>
@@ -23,6 +24,7 @@
                 <td> @Html.DisplayTextFor(modelItem => item.BookName)</td>
                 <td> @Html.DisplayTextFor(modelItem => item.BookAuthor)</td>
                 <td> @Html.DisplayTextFor(modelItem => item.BookIsbn)</td>
+                <td><a asp-controller="MyStore" asp-action="ViewBooks" asp-route-id="@item.Id">View</a></td>
             </tr>
         }
         </tbody>
