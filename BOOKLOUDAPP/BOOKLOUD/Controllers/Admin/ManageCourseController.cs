@@ -31,7 +31,7 @@ namespace BOOKLOUD.Controllers.Admin
         public IActionResult AddCourse()
         {
             ViewBag.universities = _db.University.ToList();
-            return View();
+            return View(); //return view
         }
 
         [HttpPost] //post method
